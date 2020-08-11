@@ -1,55 +1,160 @@
 [
   {
-    "name": "javascript",
-    "description": "it is a programming language use for interactive website",
+    "name": "Javascript",
+    "description": "it is a programming language use for creating interactive website",
     "link": [
       "https://www.w3schools.com/whatis/whatis_js.asp",
       "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+    ],
+    "language": "Javascript"
+  },
+  {
+    "name": "Html",
+    "description": "Html is a standard markup language for creating web content",
+    "link": [
+      "https://www.w3schools.com/whatis/whatis_html.asp",
+      "https://developer.mozilla.org/en-US/docs/Web/HTML"
+    ],
+    "language": "Javascript"
+  },
+  {
+    "name": "CSS",
+    "description": "CSS means cascading style sheet, use for styling webpage ",
+    "link": [
+      "https://www.w3schools.com/html/html_css.asp",
+      "https://developer.mozilla.org/en-US/docs/Web/CSS"
+    ],
+    "language": "CSS"
+  },
+  {
+    "name": "Method",
+    "description": "Method is a property containing a function definition",
+    "link": [
+      "https://www.w3schools.com/js/js_object_methods.asp",
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions"
+    ],
+    "language": "Javascript"
+  },
+  {
+    "name": "Object",
+    "description": "Object is one of Javascript data types. It is used to store properties and values",
+    "link": [
+      "https://www.w3schools.com/js/js_objects.asp",
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"
     ]
   },
   {
-    "name": "",
-    "description": "",
-    "link": ["", ""]
+    "name": "Function",
+    "description": "A Function is a block of code designed to perform a particular task when invoked. ",
+    "link": [
+      "https://www.w3schools.com/js/js_functions.asp",
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions"
+    ]
   },
   {
-    "name": "",
-    "description": "",
-    "link": ["", ""]
+    "name": "Callback Function",
+    "description": "A callback function is a function passed into another function as an argument, which is then called inside the outer function to perform a particular task.",
+    "link": [
+      "https://developer.mozilla.org/en-US/docs/Glossary/Callback_function"
+    ]
   },
   {
-    "name": "",
-    "description": "",
-    "link": ["", ""]
+    "name": "Properties",
+    "description": "Properties are the most important part of any JavaScript object. often describing attributes associated with a data structure.",
+    "link": [
+      "https://www.w3schools.com/js/js_object_properties.asp",
+      "https://developer.mozilla.org/en-US/docs/Glossary/property/JavaScript"
+    ]
   },
   {
-    "name": "",
-    "description": "",
-    "link": ["", ""]
+    "name": "class",
+    "description": "A class is a type of function, but instead of using the keyword function to initiate it, we use the keyword class, and the properties are assigned inside a constructor() method.",
+    "link": [
+      "https://www.w3schools.com/Js/js_classes.asp",
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes"
+    ]
   },
   {
-    "name": "",
-    "description": "",
-    "link": ["", ""]
+    "name": "Expression",
+    "description": "An expression is a combination of values, variables, and operators, which evaluates to a value.",
+    "link": [
+      "https://www.w3schools.com/js/js_syntax.asp",
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#Expressions_and_operators"
+    ]
   },
   {
-    "name": "",
-    "description": "",
-    "link": ["", ""]
+    "name": "Array",
+    "description": "An array is a special variable, which can hold more than one value at a time",
+    "link": [
+      "https://www.w3schools.com/js/js_arrays.asp",
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"
+    ]
   },
   {
-    "name": "",
-    "description": "",
-    "link": ["", ""]
+    "name": "Variable",
+    "description": "Variable is a container for storing data to be referenced and manipulated",
+    "link": [
+      "https://www.w3schools.com/js/js_variables.asp",
+      "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables#What_is_a_variable"
+    ]
   },
   {
-    "name": "",
-    "description": "",
-    "link": ["", ""]
+    "name": "SQL",
+    "description": "SQL stands for Structured Query Language for accessing database",
+    "link": [
+      "https://www.w3schools.com/whatis/whatis_sql.asp",
+      "https://developer.mozilla.org/en-US/docs/Glossary/SQL"
+    ]
+  },
+
+  {
+    "name": "Props",
+    "description": "Props are arguments passed into React components.",
+    "link": [
+      "https://www.w3schools.com/react/react_props.asp",
+      "https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started#:~:text=A%20prop%20is%20any%20data,%2F%3E%20call%20its%20first%20prop."
+    ]
   },
   {
-    "name": "",
-    "description": "",
-    "link": ["", ""]
+    "name": "React",
+    "description": "React is an open-source JavaScript library created by Facebook for building user interfaces ",
+    "link": [
+      "https://www.w3schools.com/whatis/whatis_react.asp",
+      "https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started"
+    ]
+  },
+  {
+    "name": "Render",
+    "description": "Render is the process of transforming the JSX of your react component into a DOM element that your browser can understand.",
+    "link": ["https://www.w3schools.com/react/react_render.asp"]
+  },
+  {
+    "name": "React Components",
+    "description": "Components are independent and reusable bits of code.There are two main types of components in React. Class Components and Functional Components.Class components are ES6 classes and Functional Components are functions",
+    "link": ["https://www.w3schools.com/react/react_components.asp"]
+  },
+  {
+    "name": "Regular expression",
+    "description": "Regular expressions are patterns used to match character combinations in strings",
+    "link": [
+      "https://www.w3schools.com/js/js_regexp.asp",
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions"
+    ]
+  },
+  {
+    "name": "Array forEach method",
+    "description": "The forEach() method calls a function once for each element in an array, in order.",
+    "link": [
+      "https://www.w3schools.com/jsref/jsref_foreach.asp#:~:text=The%20forEach()%20method%20calls,for%20array%20elements%20without%20values.",
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach"
+    ]
+  },
+  {
+    "name": "Array map method",
+    "description": "The map() method creates a new array with the results of calling a function for every array element.",
+    "link": [
+      "https://www.w3schools.com/jsref/jsref_map.asp#:~:text=Definition%20and%20Usage,for%20array%20elements%20without%20values.",
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map#:~:text=The%20map()%20method%20creates,element%20in%20the%20calling%20array."
+    ]
   }
 ]
