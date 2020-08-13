@@ -10,7 +10,49 @@
 .btn-flex {
   display: flex;
 }
+body{
+  background-color: red;
+}
+.title{
+  color:white;
+}
+ul.list-group.list-group-striped li:nth-of-type(odd){
+    background:rgb(220, 216, 216);
+}
+ul.list-group.list-group-striped li:nth-of-type(even){
+    background:white;
+}
+.css-grid-table,
+.css-grid-table-header,
+.css-grid-table-body {
+display: grid;
+}
 
+.css-grid-table {
+grid-template-rows: 24px 72px;
+width: 80%;
+}
+
+.css-grid-table-header,
+.css-grid-table-body {
+grid-template-columns: auto auto auto minmax(150px, 25%);
+line-height: 24px; 
+}
+
+.css-grid-table-header {
+grid-column-gap: 2px;
+grid-template-rows: auto;
+}
+
+.css-grid-table-body {
+grid-template-rows: auto auto auto;
+}
+
+.css-grid-table-header div {
+text-align: center;
+font-weight: bold;
+background-color: rgb(191, 191, 191);
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
