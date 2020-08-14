@@ -10,17 +10,49 @@
 .btn-flex {
   display: flex;
 }
-body{
-  background-color: red;
+header{
+  background:red;
+  height:3.5em;
+ 
 }
+
+.nav{
+  display:flex;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  border-radius: 4%;
+  text-align: center;
+  
+}
+
+.addTerm{
+  margin-top:-13px;
+}
+
+.backBtn{
+  margin-top:-21px;
+}
+
+input{
+  margin-left:550px;
+  margin-top:8px;
+  font-size: 36px;
+}
+
+
 .title{
   color:white;
+  text-align: center;
 }
 ul.list-group.list-group-striped li:nth-of-type(odd){
     background:rgb(220, 216, 216);
+    padding: 20px;
+    
 }
 ul.list-group.list-group-striped li:nth-of-type(even){
     background:white;
+    padding: 20px;
+    
+
 }
 .css-grid-table,
 .css-grid-table-header,
@@ -36,7 +68,7 @@ width: 80%;
 .css-grid-table-header,
 .css-grid-table-body {
 grid-template-columns: auto auto auto minmax(150px, 25%);
-line-height: 24px; 
+line-height: 44px; 
 }
 
 .css-grid-table-header {
@@ -82,3 +114,43 @@ background-color: rgb(191, 191, 191);
     transform: rotate(360deg);
   }
 }
+
+.title{
+  color: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.divTable{
+	display: table;
+	width: 100%;
+}
+.divTableRow {
+	display: table-row;
+}
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+}
+.divTableCell, .divTableHead {
+	border: 1px solid #999999;
+	display: table-cell;
+	padding: 3px 10px;
+}
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+	font-weight: bold;
+}
+.divTableFoot {
+	background-color: #EEE;
+	display: table-footer-group;
+	font-weight: bold;
+}
+.divTableBody {
+	display: table-row-group;
+}
+
+ 
+
+
+
