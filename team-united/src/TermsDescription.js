@@ -44,12 +44,12 @@ const TermsDescription = ({ match }) => {
                 </div>
               </div>
               <div className="divTableCell">
-                <button className="bg-green-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded ml-4 mt-4">
+                <Link><button className="bg-green-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded ml-4 mt-4">
                   Edit
-                </button>
-                <button className="bg-red-500 hover:bg-blue-700 text-white font-bold py-1 px-1 rounded ml-4 mt-4">
+                </button></Link>
+                <Link><button className="bg-red-500 hover:bg-blue-700 text-white font-bold py-1 px-1 rounded ml-4 mt-4">
                   Delete
-                </button>
+                </button></Link>
               </div>
             </div>
           </div>
