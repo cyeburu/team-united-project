@@ -79,6 +79,21 @@ ul.list-group.list-group-striped li:nth-of-type(even) {
   font-weight: bold;
   background-color: rgb(191, 191, 191);
 }
+.container {
+  display: flex;
+  flex-direction: column;
+}
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: 4px;
+  font-size: 10px;
+}
+
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

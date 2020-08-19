@@ -12,7 +12,7 @@ const GlossaryList = () => {
       <div className="nav">
         <div className="addTerm">
           <button className="bg-green-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded ml-4 mt-4">
-            Add Term
+            <Link to={`/AddTermForm/`}>Add Term</Link>
           </button>
         </div>
         <SearchTerm search={search} setSearch={setSearch} />
