@@ -15,9 +15,16 @@ const AddTermForm = (props) => {
   };
   const [newTerm, setNewTerm] = useState(initialFormState);
   console.log(newTerm);
+
   const inputChangeHandler = (event) => {
     const { name, value } = event.target;
     setNewTerm({ ...newTerm, [name]: value });
+  };
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (newTerm.name) {
+      inputChangeHandler(event, props.addTerm(newTerm));
+    }
   };
   return (
     <div>
@@ -28,15 +35,7 @@ const AddTermForm = (props) => {
           </button>
         </Link>
       </div>
-      <form
-        className="container"
-        onSubmit={(event) => {
-          console.log(event);
-          event.preventDefault();
-          if (!newTerm.name) return props.addTerm;
-          props.addTerm(newTerm);
-        }}
-      >
+      <form className="container">
         <label htmlFor="Terms">Term:</label>
         <input
           type="text"
@@ -44,7 +43,7 @@ const AddTermForm = (props) => {
           value={newTerm.name}
           onChange={inputChangeHandler}
         />
-        <button>Submit</button>
+        <button onClick={handleSubmit}>Submit</button>
       </form>
     </div>
   );
