@@ -1,8 +1,23 @@
-import React from "react";
-import TermsData from "./TermsData.json";
+import React,{ useState,useEffect } from "react";
+
+import axios from "axios"
 import { Link } from "react-router-dom";
 
-const TermsDescription = ({ match }) => {
+const TermsDescription = (data) => {
+     
+   const convertedData = Object.values(data);
+   
+   const[singleData,setSingleData] =useState([]);
+       const extractedID = convertedData.map((ID) => ID._id)
+        
+   useEffect(()=>{
+       axios.get(`https://cyf-glossary-backend.herokuapp.com/all-terms/${extractedID}`)
+       .then(res =>setSingleData(res.data))
+   },[extractedID])
+      //  const convertedArrayOfObj= singleData.map(el=>{
+      //   return Object.values(el)
+      //  })
+    console.log(singleData[0].name)
   return (
     <div>
       <div>
@@ -27,21 +42,19 @@ const TermsDescription = ({ match }) => {
               </div>
             </div>
             <div className="divTableRow">
+          <div className="divTableCell">{singleData.name}</div>
               <div className="divTableCell">
-                {TermsData[match.params.id].name}
-              </div>
-              <div className="divTableCell">
-                {TermsData[match.params.id].description}
+                {singleData.description}
+
                 <div>
-                  <a href={TermsData[match.params.id].link[0]}>
-                    {TermsData[match.params.id].link[0]}
-                  </a>
+                  <a href={singleData.link}>{singleData.link}</a>
                 </div>
-                <div>
-                  <a href={TermsData[match.params.id].link[1]}>
-                    {TermsData[match.params.id].link[1]}
+
+                {/* <div>
+                  <a href={singleData.link[1]}>
+                  {singleData.link[1]}
                   </a>
-                </div>
+                </div> */}
               </div>
               <div className="divTableCell">
                 <button className="bg-green-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded ml-4 mt-4">

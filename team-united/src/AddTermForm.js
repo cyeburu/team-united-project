@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const AddTermForm = (props) => {
-  //console.log(props)
+  console.log(props);
 
   const initialFormState = {
     id: null,
@@ -10,11 +10,10 @@ const AddTermForm = (props) => {
     description: "",
     link: "",
     link2: "",
-    link3: "",
-    link4: "",
   };
+
   const [newTerm, setNewTerm] = useState(initialFormState);
-  console.log(newTerm);
+  //console.log(newTerm);
 
   const inputChangeHandler = (event) => {
     const { name, value } = event.target;
@@ -23,7 +22,7 @@ const AddTermForm = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (newTerm.name) {
-      inputChangeHandler(event, props.addTerm(newTerm));
+      props.addTerm(newTerm);
     }
   };
   return (
@@ -40,9 +39,15 @@ const AddTermForm = (props) => {
         <input
           type="text"
           name="name"
-          value={newTerm.name}
+          defaultValue={newTerm.name}
           onChange={inputChangeHandler}
         />
+        <label htmlFor="description">Description:</label>
+        <textarea type="text" name="description" defaultValue="" />
+        <label htmlFor="link">Link1: </label>
+        <input type="url" name="link" defaultValue="" />
+        <label htmlFor="link">Link2: </label>
+        <input type="url" name="link2" defaultValue="" />
         <button onClick={handleSubmit}>Submit</button>
       </form>
     </div>

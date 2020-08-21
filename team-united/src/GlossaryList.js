@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import SearchTerm from "./SearchTerm";
-import TermsData from "./TermsData.json";
 import { Link } from "react-router-dom";
 
-const GlossaryList = () => {
+const GlossaryList = (data) => {
   const [search, setSearch] = useState("");
-  let sortData = [...TermsData].sort((a, b) => a.name.localeCompare(b.name));
-
+  const convertedData = Object.values(data);
+ 
+  let sortData = convertedData.sort((a, b) => a.name.localeCompare(b.name));
   return (
     <div>
       <div className="nav">
@@ -27,7 +27,7 @@ const GlossaryList = () => {
             .map((terms, index) => {
               return (
                 <li className="col-12" key={index}>
-                  <Link to={`/TermsDescription/${terms.id}`}>{terms.name}</Link>
+                  <Link to={`/TermsDescription/${terms._id}`}>{terms.name}</Link>
                 </li>
               );
             })}
