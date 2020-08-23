@@ -63,7 +63,7 @@ const AddTermForm = (props) => {
         defaultValue={newTerm.link2}
         onChange={initialFormState}
         />
-        <button className="bg-red-500 hover:bg-blue-700 text-white font-bold py-1 px-1 rounded ml-4 mt-4" onClick={handleSubmit}>Submit</button>
+        <button className="bg-red-500 text-white font-bold py-1 px-1 rounded ml-4 mt-4" onClick={handleSubmit}>Submit</button>
       </form>
     </div>
   );
