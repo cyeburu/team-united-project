@@ -43,12 +43,27 @@ const AddTermForm = (props) => {
           onChange={inputChangeHandler}
         />
         <label htmlFor="description">Description:</label>
-        <textarea type="text" name="description" defaultValue="" />
+        <textarea 
+        type="text" 
+        name="description" 
+        defaultValue={newTerm.description} 
+        onChange={inputChangeHandler}
+        />
         <label htmlFor="link">Link1: </label>
-        <input type="url" name="link" defaultValue="" />
+        <input 
+        type="url" 
+        name="link"
+        defaultValue={newTerm.link}
+        onChange={inputChangeHandler}
+        />
         <label htmlFor="link">Link2: </label>
-        <input type="url" name="link2" defaultValue="" />
-        <button onClick={handleSubmit}>Submit</button>
+        <input 
+        type="url" 
+        name="link2" 
+        defaultValue={newTerm.link2}
+        onChange={initialFormState}
+        />
+        <button className="bg-red-500 hover:bg-blue-700 text-white font-bold py-1 px-1 rounded ml-4 mt-4" onClick={handleSubmit}>Submit</button>
       </form>
     </div>
   );
