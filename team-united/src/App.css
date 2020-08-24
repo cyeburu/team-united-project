@@ -23,15 +23,15 @@ header {
 }
 
 .addTerm {
-  margin-top: -13px;
+  margin-top: 15px;
 }
 
 .backBtn {
   margin-top: -21px;
 }
 
-input {
-  margin-left: 550px;
+.search {
+  margin-left: 150px;
   margin-top: 8px;
   font-size: 36px;
 }
@@ -144,3 +144,33 @@ ul.list-group.list-group-striped li:nth-of-type(even) {
 .divTableBody {
   display: table-row-group;
 }
+
+input[type=submit]:hover {
+  background-color: grey;
+  margin-top:15px
+}
+   input {
+    width: 40%;
+    height: 50px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  .description {
+    height: 150px;
+  }
+  label {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  form {
+    margin-left: 20px
+  }
+  .errors {
+    color: red;
+    margin-left: 10%
+  }
+  input-error {
+    border-color: red;
+
+  }
