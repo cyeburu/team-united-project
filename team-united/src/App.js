@@ -4,6 +4,7 @@ import TermsDescription from "./TermsDescription";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
+import AddTermForm from "./AddTermForm"
 
 const App = () => {
   return (
@@ -13,6 +14,8 @@ const App = () => {
           <Switch>
             <Route path="/" exact component={GlossaryList} />
             <Route path="/TermsDescription/:id/" component={TermsDescription} />
+            <Route path="/AddTermForm/" component={AddTermForm} />
+
           </Switch>
         </BrowserRouter>
       </header>
