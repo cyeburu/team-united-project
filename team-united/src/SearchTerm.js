@@ -1,14 +1,14 @@
 import React from "react";
 
 const SearchTerm = ({ search, setSearch }) => {
-  const handleChange=(event)=> {
+  const handleChange = (event) => {
     setSearch(event.target.value);
   }
 
   return (
     <div>
       <input
-        className="border-2 border-gray-300 bg-white h-10 px-5 pr-10 rounded-lg text-sm focus:outline-none"
+        className="border-2 border-gray-300 bg-white h-10 px-5 pr-10 rounded-lg text-sm focus:outline-none search"
         type="text"
         onChange={handleChange}
         value={search}
