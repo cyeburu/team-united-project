@@ -6,7 +6,7 @@ import Axios from "axios";
 
 const AddTermForm = (props) => {
   console.log(props);
-
+  /*this is updated version*/
   const initialFormState = {
     id: null,
     name: "",
