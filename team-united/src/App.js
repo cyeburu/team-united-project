@@ -3,7 +3,6 @@ import GlossaryList from "./GlossaryList";
 import TermsDescription from "./TermsDescription";
 import AddTermForm from "./AddTermForm";
 import TermsData from "./TermsData.json";
-
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
@@ -16,6 +15,8 @@ const App = () => {
     nTerm.id = newTerm.length + 1;
     setNewTerm({ ...newTerm, nTerm });
   };
+
+  
 
   return (
     <div>
