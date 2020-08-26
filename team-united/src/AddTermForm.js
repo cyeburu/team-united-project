@@ -32,7 +32,7 @@ const AddTermForm = (props) => {
     setNewTerm({ ...newTerm, [name]: value });
   };
   const submitHandle = (event) => {
-    //event.preventDefault();
+    event.preventDefault();
     if (newTerm.name) {
       props.addTerm(newTerm);
     }
