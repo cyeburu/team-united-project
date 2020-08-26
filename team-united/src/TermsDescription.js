@@ -56,8 +56,13 @@ const TermsDescription = (props) => {
                     Edit
                   </button>
                   <button
-                    onClick={() => deleteTerm(props.match.params.id)}
-                    className="bg-red-500 hover:bg-blue-700 text-white font-bold py-1 px-1 rounded ml-4 mt-4"
+                    onClick={() => {
+                      deleteTerm(props.match.params.id);
+                      alert(" The following record has been deleted");
+                      setInterval(function () {
+                        window.location = "/";
+                      }, 500);
+                    }}
                   >
                     Delete
                   </button>
