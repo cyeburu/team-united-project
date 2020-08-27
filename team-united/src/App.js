@@ -6,8 +6,9 @@ import TermsData from "./TermsData.json";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
+import EditTermForm from "./EditTermForm";
 
-const App = () => {
+const App = (props) => {
   const [newTerm, setNewTerm] = useState(TermsData);
 
   /* add term function */
@@ -29,7 +30,8 @@ const App = () => {
             <Route
               path="/AddTermForm"
               render={() => <AddTermForm addTerm={addTerm} />}
-            />
+            />  
+          <Route exact path="/EditTermForm/:id" component={EditTermForm} />
           </Switch>
         </BrowserRouter>
       </header>
