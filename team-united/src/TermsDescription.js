@@ -25,6 +25,14 @@ const TermsDescription = (props) => {
   return (
     <div>
       {singleData &&
+
+  /*delete term functionality*/
+  const deleteTerm = (id) => {
+    axios.delete(`https://cyf-glossary-backend.herokuapp.com/all-terms/${id}`);
+  };
+  return (
+    <div>
+      {singleData && (
         <div>
           <div className="backBtn">
             <Link to={`/`}>
@@ -47,23 +55,27 @@ const TermsDescription = (props) => {
                 </div>
               </div>
               <div className="divTableRow">
-                <div className="divTableCell">
-                  {singleData.name}
-                </div>
+                <div className="divTableCell">{singleData.name}</div>
                 <div className="divTableCell">
                   {singleData.description}
 
                   <div>
-                    <a href={singleData.link}>
-                      {singleData.link}
-                    </a>
+                    <a href={singleData.link}>{singleData.link}</a>
                   </div>
                 </div>
                 <div className="divTableCell">
                   <button className="bg-green-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded ml-4 mt-4">
                     Edit
                   </button>
-                  <button className="bg-red-500 hover:bg-blue-700 text-white font-bold py-1 px-1 rounded ml-4 mt-4">
+                  <button
+                    onClick={() => {
+                      deleteTerm(props.match.params.id);
+                      alert(" The following record has been deleted");
+                      setInterval(function () {
+                        window.location = "/";
+                      }, 500);
+                    }}
+                  >
                     Delete
                   </button>
                 </div>
@@ -72,8 +84,8 @@ const TermsDescription = (props) => {
           </div>
         </div>
       }
+    )}
     </div>
   );
 };
-
 export default TermsDescription;

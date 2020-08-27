@@ -3,8 +3,6 @@ import { Link, withRouter } from "react-router-dom";
 import Axios from "axios";
 import { useForm } from "react-hook-form";
 
-
-
 const AddTermForm = (props) => {
   const { register, handleSubmit, errors, reset } = useForm()
   /*this is updated version*/
@@ -15,7 +13,6 @@ const AddTermForm = (props) => {
     link: "",
     link2: "",
   };
-
 
   const [newTerm, setNewTerm] = useState(initialFormState);
   console.log(newTerm);
@@ -36,8 +33,6 @@ const AddTermForm = (props) => {
     }
     Axios.post("https://cyf-glossary-backend.herokuapp.com/all-terms", newTerm);
   };
-
-
 
   return (
     <div>
