@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 const TermsDescription = (props) => {
-   const [singleData, setSingleData] = useState(null);
+  const [singleData, setSingleData] = useState(null);
 
   useEffect(() => {
     axios
@@ -12,11 +12,19 @@ const TermsDescription = (props) => {
       )
       .then((res) => setSingleData(res.data));
   }, [props.match.params.id]);
-   
-    
-    return (
+
+  useEffect(() => {
+    axios
+      .put(
+        `https://cyf-glossary-backend.herokuapp.com/all-terms/${props.match.params.id}, id`
+      )
+      .then((res) => setSingleData(res.data));
+  }, [props.match.params.id]);
+
+
+  return (
     <div>
-      {singleData && 
+      {singleData &&
         <div>
           <div className="backBtn">
             <Link to={`/`}>
@@ -63,7 +71,7 @@ const TermsDescription = (props) => {
             </div>
           </div>
         </div>
-}
+      }
     </div>
   );
 };

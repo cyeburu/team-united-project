@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import SearchTerm from "./SearchTerm";
 import { Link } from "react-router-dom";
 import axios from "axios";
@@ -9,14 +9,12 @@ const GlossaryList = () => {
   const [data, setData] = useState([]);
   const convertedData = Object.values(data);
   let sortData = convertedData.sort((a, b) => a.name.localeCompare(b.name));
-  
+
   useEffect(() => {
     axios
       .get(`https://cyf-glossary-backend.herokuapp.com/all-terms`)
-      .then((Result) =>setData(Result.data));
+      .then((Result) => setData(Result.data));
   }, []);
-     
-
 
   return (
     <div>
@@ -38,16 +36,17 @@ const GlossaryList = () => {
                   terms.name.toLowerCase().includes(search.toLowerCase())
                 )
                 .map((terms, index) => {
-                   
+
                   return (
                     <li className="col-12" key={index}>
                       <Link
                         to={{
-                          pathname: `/TermsDescription/${terms._id}`}}
+                          pathname: `/TermsDescription/${terms._id}`
+                        }}
                       >
                         {terms.name}
                       </Link>
-                      
+
                     </li>
                   );
                 })}
