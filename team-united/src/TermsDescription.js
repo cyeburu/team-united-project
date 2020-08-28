@@ -53,9 +53,13 @@ const TermsDescription = (props) => {
                   </div>
                 </div>
                 <div className="divTableCell">
-                  <button className="bg-green-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded ml-4 mt-4">
+                 <Link to={`/EditTermForm/${props.match.params.id}`}>
+                   <button className="bg-green-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded ml-4 mt-4">
                     Edit
                   </button>
+                  </Link>
+
+          
                   <button
                     onClick={() => {
                       deleteTerm(props.match.params.id);
