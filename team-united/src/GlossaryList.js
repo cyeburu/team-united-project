@@ -2,11 +2,15 @@ import React, { useState, useEffect } from "react";
 import SearchTerm from "./SearchTerm";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import CatergoriseFilter from "./CategoriseFilter";
 
 
 const GlossaryList = () => {
   const [search, setSearch] = useState("");
+  const[categoriseFilter, setCategoriseFilter]=useState("");
   const [data, setData] = useState([]);
+
+
   const convertedData = Object.values(data);
   let sortData = convertedData.sort((a, b) => a.name.localeCompare(b.name));
 
@@ -15,7 +19,8 @@ const GlossaryList = () => {
       .get(`https://cyf-glossary-backend.herokuapp.com/all-terms`)
       .then((Result) => setData(Result.data));
   }, []);
-
+  
+ 
   return (
     <div>
       {convertedData !== null ? (
@@ -27,11 +32,14 @@ const GlossaryList = () => {
               </button>
             </div>
             <SearchTerm search={search} setSearch={setSearch} />
+            <CatergoriseFilter setCategoriseFilter={setCategoriseFilter}/>
           </div>
           <h1 className="title">Code Your Future Glossary</h1>
           <h3>
             <ul className="container  list-unstyled list-group list-group-striped col-md-10">
-              {sortData
+              {sortData.
+              filter((categoryFilter) => 
+                   categoryFilter.name[0].toLowerCase().includes(categoriseFilter.toLowerCase()))
                 .filter((terms) =>
                   terms.name.toLowerCase().includes(search.toLowerCase())
                 )
