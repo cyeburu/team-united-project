@@ -48,7 +48,7 @@ const AddTermForm = (props) => {
       return (
         term.name.toLowerCase() === nTerm ||
         term.name.toUpperCase() === nTerm
-       
+
       );
     });
 
@@ -62,13 +62,13 @@ const AddTermForm = (props) => {
             Back
           </button>
         </Link>
-        <h3 className="text-center mb-4 text-muted">Add A Term</h3>
+        <h3 className="text-center mb-4 text-muted">New Term</h3>
       </div>
       <div>
         <ErrorMessage errors={errors} name="singleErrorInput" />
       </div>
       <form onSubmit={handleSubmit(onSubmit)} className="container">
-        <label htmlFor="Terms">Term:</label>
+        <label htmlFor="Terms">Add Terminology:</label>
         <input
           ref={register({
             required: "ADDTERM REQUIRED",
@@ -77,6 +77,7 @@ const AddTermForm = (props) => {
               message: "Addterm must be longer than 3 Characters ",
             },
           })}
+          placeholder="Term name"
           type="text"
           name="name"
           defaultValue={newTerm.name}
@@ -92,6 +93,7 @@ const AddTermForm = (props) => {
               message: "description must be longer than 10 Characters ",
             },
           })}
+          placeholder="Term description"
           type="text"
           name="description"
           defaultValue={newTerm.description}
@@ -101,6 +103,7 @@ const AddTermForm = (props) => {
         <label htmlFor="link">Link1: </label>
         <input
           ref={register({ required: "LINK REQUIRED" })}
+          placeholder="Url for further information"
           type="url"
           name="link"
           defaultValue={newTerm.link}
@@ -109,7 +112,7 @@ const AddTermForm = (props) => {
         {errors.link && <p>{errors.link.message}</p>}
         <label htmlFor="link">Link2: </label>
         <input
-          ref={register({ required: "LINK REQUIRED" })}
+          placeholder="Url for further information"
           type="url"
           name="link2"
           defaultValue={newTerm.link2}
