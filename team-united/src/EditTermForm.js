@@ -4,8 +4,8 @@ import axios from "axios";
 
 
 const EditTermForm = (props) => {
-    let history = useHistory();
-  
+  let history = useHistory();
+
 
   const initialFormState = {
     id: null,
@@ -23,9 +23,6 @@ const EditTermForm = (props) => {
     setNewTerm({ ...newTerm, [name]: value });
   };
 
-  useEffect(() => {
-    loadTerm();
-  }, []);
 
   const onSubmit = async e => {
     e.preventDefault();
@@ -33,10 +30,15 @@ const EditTermForm = (props) => {
     history.push("/");
   };
 
-  const loadTerm = async () => {
-    const result = await axios.get((`https://cyf-glossary-backend.herokuapp.com/all-terms/${props.match.params.id}`));
-    setNewTerm(result.data);
-  };
+
+
+  useEffect(() => {
+    const loadTerm = async () => {
+      const result = await axios.get((`https://cyf-glossary-backend.herokuapp.com/all-terms/${props.match.params.id}`));
+      setNewTerm(result.data);
+    };
+    loadTerm();
+  }, [props.match.params.id]);
 
   return (
     <div>
@@ -57,7 +59,7 @@ const EditTermForm = (props) => {
           onChange={inputChangeHandler}
 
         />
-    
+
         <label htmlFor="description">Description:</label>
         <textarea
           type="text"
@@ -65,7 +67,7 @@ const EditTermForm = (props) => {
           defaultValue={newTerm.description}
           onChange={inputChangeHandler}
         />
-      
+
         <label htmlFor="link">Link1: </label>
         <input
           type="url"
@@ -73,7 +75,7 @@ const EditTermForm = (props) => {
           defaultValue={newTerm.link}
           onChange={inputChangeHandler}
         />
-    
+
         <label htmlFor="link">Link2: </label>
         <input
           type="url"
@@ -81,7 +83,7 @@ const EditTermForm = (props) => {
           defaultValue={newTerm.link2}
           onChange={inputChangeHandler}
         />
-       <button className="btn btn-warning btn-block">Update Term</button>
+        <button className="btn btn-warning btn-block">Update Term</button>
       </form>
     </div >
   );
