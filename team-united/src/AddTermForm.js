@@ -4,7 +4,7 @@ import Axios from "axios";
 import { useForm } from "react-hook-form";
 
 const AddTermForm = (props) => {
-  const { register, handleSubmit, errors, reset } = useForm()
+  const { register, handleSubmit, errors } = useForm()
   /*this is updated version*/
   const initialFormState = {
     id: null,
