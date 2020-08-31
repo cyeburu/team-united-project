@@ -46,9 +46,9 @@ const AddTermForm = (props) => {
   const doesTermExist = (nTerm) => {
     const filterData = props.data.filter((term) => {
       return (
-        term.name.toLowerCase() ||
-        term.name.toUpperCase() === nTerm.toLowerCase() ||
-        nTerm.toUpperCase()
+        term.name.toLowerCase() === nTerm ||
+        term.name.toUpperCase() === nTerm
+       
       );
     });
 
