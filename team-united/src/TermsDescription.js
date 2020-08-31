@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
@@ -16,8 +15,12 @@ const TermsDescription = (props) => {
   }, [props.match.params.id]);
 
   /*delete term functionality*/
-  const deleteTerm = (id) => {
-    axios.delete(`https://cyf-glossary-backend.herokuapp.com/all-terms/${id}`);
+  const deleteTerm = async (id) => {
+    await axios.delete(
+      `https://cyf-glossary-backend.herokuapp.com/all-terms/${id}`
+    );
+    alert(" The following record has been deleted");
+    window.location = "/";
   };
   return (
     <div>
@@ -53,20 +56,15 @@ const TermsDescription = (props) => {
                   </div>
                 </div>
                 <div className="divTableCell">
-                 <Link to={`/EditTermForm/${props.match.params.id}`}>
-                   <button className="bg-green-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded ml-4 mt-4">
-                    Edit
-                  </button>
+                  <Link to={`/EditTermForm/${props.match.params.id}`}>
+                    <button className="bg-green-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded ml-4 mt-4">
+                      Edit
+                    </button>
                   </Link>
 
-          
                   <button
                     onClick={() => {
                       deleteTerm(props.match.params.id);
-                      alert(" The following record has been deleted");
-                      setInterval(function () {
-                        window.location = "/";
-                      }, 500);
                     }}
                     className="bg-red-500 hover:bg-blue-700 text-white font-bold py-1 px-1 rounded ml-4 mt-4"
                   >
