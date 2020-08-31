@@ -11,8 +11,8 @@ const CatergoriseFilter = ({ setCategoriseFilter }) => {
            
       <h1></h1>
      
-       <select className="border-2 border-gray-300 bg-white h-10 px-4 pr-8 rounded-lg text-lg" onChange={handleSelect}>
-           <option selected value="">Sort A-Z</option>
+       <select defaultValue={'DEFAULT'} className="border-2 border-gray-300 bg-white h-10 px-4 pr-8 rounded-lg text-lg" onChange={handleSelect}>
+           <option value="">Sort A-Z</option>
            <option value="A">A</option>
            <option value="B">B</option>
            <option value="C">C</option>
