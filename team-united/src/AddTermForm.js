@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { Link, withRouter } from "react-router-dom";
 import Axios from "axios";
 import { useForm } from "react-hook-form";
+import { ErrorMessage } from "@hookform/error-message";
 
 const AddTermForm = (props) => {
-  const { register, handleSubmit, errors, reset } = useForm();
+  const { register, handleSubmit, errors, setError, clearErrors } = useForm();
   /*this is updated version*/
   const initialFormState = {
     id: null,
@@ -19,20 +20,36 @@ const AddTermForm = (props) => {
   const inputChangeHandler = (event) => {
     const { name, value } = event.target;
     setNewTerm({ ...newTerm, [name]: value });
-    console.log(value);
+    console.log(name);
   };
 
-  const onSubmit = () => {
+  const onSubmit = async () => {
+    clearErrors();
+    if (doesTermExist(newTerm.name)) {
+      return setError("name", {
+        type: "manual",
+        message: "Term Already Exists in the database",
+      });
+    }
+
     if (newTerm.name) {
       props.addTerm(newTerm);
+      await Axios.post(
+        "https://cyf-glossary-backend.herokuapp.com/all-terms",
+        newTerm
+      );
       alert("Your term has been added to the Glossary list");
-      setInterval(() => {
-        window.location = "/";
-      }, 1000);
-    }
-    Axios.post("https://cyf-glossary-backend.herokuapp.com/all-terms", newTerm);
-  };
 
+      window.location = "/";
+    }
+  };
+  const doesTermExist = (nTerm) => {
+    const filterData = props.data.filter((term) => {
+      return term.name === nTerm;
+    });
+
+    return filterData.length;
+  };
   return (
     <div>
       <div className="backBtn">
@@ -43,14 +60,10 @@ const AddTermForm = (props) => {
         </Link>
         <h3 className="text-center mb-4 text-muted">Add A Term</h3>
       </div>
-      <form
-        onSubmit={
-          newTerm.name === newTerm.value
-            ? register({message:'Term is already exists'})
-            : handleSubmit(onSubmit)
-        }
-        className="container"
-      >
+      <div>
+        <ErrorMessage errors={errors} name="singleErrorInput" />
+      </div>
+      <form onSubmit={handleSubmit(onSubmit)} className="container">
         <label htmlFor="Terms">Term:</label>
         <input
           ref={register({
