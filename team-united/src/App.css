@@ -12,7 +12,12 @@
 }
 header {
   background: red;
-  height: 3.5em;
+  height: 3.7em;
+  background-image: url('https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F98678234%2F208583538221%2F2%2Foriginal.png?w=225&auto=format%2Ccompress&q=75&sharp=10&s=67003f673b66b84139ebe50fd0b764a0');
+  background-position: 100px 5px;
+  background-repeat: no-repeat;
+  background-size: 48px; 
+
 }
 
 .nav {
@@ -24,6 +29,7 @@ header {
 
 #addTerm {
   margin: -14px 0;
+  font-size: 20px;
   right: 0;
   position: fixed;
   padding-top: -20px;
@@ -94,6 +100,7 @@ input {
 }
 .search{
   padding-right: 420px;
+  font-size: 20px;;
 }
 
 input[type=search] { 
