@@ -18,7 +18,9 @@ const GlossaryList = (props) => {
                 <Link to={`/AddTermForm/`}style={{ textDecoration: 'none', color: 'white' }}>Add Term</Link>
               </button>
             </div>
+            <div className="search">
             <SearchTerm search={search} setSearch={setSearch} />
+            </div>
             <CatergoriseFilter setCategoriseFilter={setCategoriseFilter} />
           </div>
           <h1 className="title">Code Your Future Glossary</h1>
