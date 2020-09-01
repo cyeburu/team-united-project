@@ -22,8 +22,12 @@ header {
   text-align: center;
 }
 
-.addTerm {
-  margin-top: -13px;
+#addTerm {
+  margin: -11px 0;
+  right: 0;
+  position: fixed;
+  padding-top: -200px;
+  padding-right: 120px;
 }
 
 .backBtn {
