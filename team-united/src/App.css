@@ -11,29 +11,33 @@
   display: flex;
 }
 header {
-  background: red;
+
+  background:lightblue;
   height: 3.7em;
-  background-image: url('https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F98678234%2F208583538221%2F2%2Foriginal.png?w=225&auto=format%2Ccompress&q=75&sharp=10&s=67003f673b66b84139ebe50fd0b764a0');
-  background-position: 100px 5px;
+  background-image: url('https://codeyourfuture.io/wp-content/uploads/2019/03/cyf_brand.png');
+  background-position: 40px 5px;
   background-repeat: no-repeat;
-  background-size: 48px; 
+  background-size: 150px; 
+ 
 
 }
 
 .nav {
+
   display: flex;
   font-family: Georgia, "Times New Roman", Times, serif;
   border-radius: 4%;
   text-align: center;
 }
 
-#addTerm {
-  margin: -14px 0;
+.addTerm {
+  position: relative;
   font-size: 20px;
-  right: 0;
-  position: fixed;
-  padding-top: -20px;
-  padding-right: 120px;
+  padding-left: 922px;
+  margin-top: -19px;
+ 
+  
+
 }
 
 .backBtn {
@@ -90,6 +94,7 @@ ul.list-group.list-group-striped li:nth-of-type(even) {
   flex-direction: column;
 }
 input {
+  position: relative;
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -98,15 +103,18 @@ input {
   border-radius: 4px;
   font-size: 10px;
 }
-.search{
-  padding-right: 420px;
-  font-size: 20px;;
+select{
+  position: relative;
+  right: -400px;
+  font-size: 20px;
+  top: -45px;
+  position: relative;
 }
 
 input[type=search] { 
   position: relative;
   left: 300px;
-  top: 1px;
+  top: -45px;
   box-sizing: border-box;
   background-image: url('https://www.w3schools.com/css/searchicon.png');
   background-position: 10px 10px;
