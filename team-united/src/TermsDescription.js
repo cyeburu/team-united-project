@@ -28,7 +28,7 @@ const TermsDescription = (props) => {
         <div>
           <div className="backBtn">
             <Link to={`/`}>
-              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded ml-4 mt-4">
+              <button className="bg-blue-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded ml-4 mt-4">
                 Back
               </button>
             </Link>
@@ -63,10 +63,11 @@ const TermsDescription = (props) => {
                   </Link>
 
                   <button
-                    onClick={() => {
-                      deleteTerm(props.match.params.id);
+                    onClick={(e) => { 
+                      if (window.confirm('Are you sure you wish to delete this term?'))
+                           deleteTerm(props.match.params.id);
                     }}
-                    className="bg-red-500 hover:bg-blue-700 text-white font-bold py-1 px-1 rounded ml-4 mt-4"
+                       className="bg-red-500 hover:bg-blue-700 text-white font-bold py-1 px-1 rounded ml-4 mt-4"
                   >
                     Delete
                   </button>
