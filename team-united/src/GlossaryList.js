@@ -13,12 +13,14 @@ const GlossaryList = (props) => {
       {props.convertedData !== null ? (
         <div>
           <div className="nav">
-            <div id="addTerm">
+            <div className="addTerm">
               <button className="bg-green-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded ml-4 mt-4">
                 <Link to={`/AddTermForm/`}style={{ textDecoration: 'none', color: 'white' }}>Add Term</Link>
               </button>
             </div>
+            <div className="search">
             <SearchTerm search={search} setSearch={setSearch} />
+            </div>
             <CatergoriseFilter setCategoriseFilter={setCategoriseFilter} />
           </div>
           <h1 className="title">Code Your Future Glossary</h1>
