@@ -14,7 +14,7 @@ const App = () => {
   const [newTerm, setNewTerm] = useState(TermsData);
   const [data, setData] = useState([]);
   const [currentPage,setCurrentPage]=useState(1);
-  const [postsPerPage]= useState(10);
+  const [postsPerPage]= useState(20);
   
 
 
@@ -44,13 +44,19 @@ const App = () => {
           <Switch>
             <Route
               path="/"
-              exact
               render={() => (
+                <div>
                 <GlossaryList
                   data={currentPost}
                   convertedData={convertedData}
                   sortData={sortData}
+                 />
+                  <Pagination
+                  postsPerPage={postsPerPage}
+                  totalPosts={data.length}
+                  paginate={paginate}
                 />
+              </div>
               )}
             />
             
@@ -64,14 +70,9 @@ const App = () => {
           </Switch>
         </BrowserRouter>
       </header>
-       <footer>
+    
+    
 
-      <Pagination
-        postsPerPage={postsPerPage}
-        totalPosts={data.length}
-        paginate={paginate}
-      />
-       </footer>
     </div>
   );
 };
