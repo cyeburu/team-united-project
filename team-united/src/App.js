@@ -35,7 +35,7 @@ const App = () => {
   const currentPost = data.slice(indexOfFirstPost,indexOfLastPost);
   const convertedData = Object.values(currentPost);
   let sortData = convertedData.sort((a, b) => a.name.localeCompare(b.name));
-  
+  //gloassaryList and Pagination component
   const paginate =(pageNumber)=>setCurrentPage(pageNumber);
   return (
     <div>
