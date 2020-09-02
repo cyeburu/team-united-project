@@ -6,7 +6,7 @@ import { ErrorMessage } from "@hookform/error-message";
 
 const AddTermForm = (props) => {
   const { register, handleSubmit, errors, setError, clearErrors } = useForm();
-  /*this is updated version*/
+  /*New version test*/
   const initialFormState = {
     id: null,
     name: "",
