@@ -3,6 +3,7 @@ import GlossaryList from "./GlossaryList";
 import TermsDescription from "./TermsDescription";
 import AddTermForm from "./AddTermForm";
 import TermsData from "./TermsData.json";
+import Pagination from'./Pagination';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
@@ -12,8 +13,10 @@ import EditTermForm from "./EditTermForm";
 const App = () => {
   const [newTerm, setNewTerm] = useState(TermsData);
   const [data, setData] = useState([]);
-  const convertedData = Object.values(data);
-  let sortData = convertedData.sort((a, b) => a.name.localeCompare(b.name));
+  const [currentPage,setCurrentPage]=useState(1);
+  const [postsPerPage]= useState(20);
+  
+
 
   /* add term function */
   const addTerm = (nTerm) => {
@@ -27,6 +30,13 @@ const App = () => {
       .then((Result) => setData(Result.data));
   }, []);
 
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPost = data.slice(indexOfFirstPost,indexOfLastPost);
+  const convertedData = Object.values(currentPost);
+  let sortData = convertedData.sort((a, b) => a.name.localeCompare(b.name));
+  //gloassaryList and Pagination component
+  const paginate =(pageNumber)=>setCurrentPage(pageNumber);
   return (
     <div>
       <header>
@@ -34,16 +44,23 @@ const App = () => {
           <Switch>
             <Route
               path="/"
-              exact
               render={() => (
+                <div>
                 <GlossaryList
-                  data={data}
+                  data={currentPost}
                   convertedData={convertedData}
                   sortData={sortData}
+                 />
+                  <Pagination
+                  postsPerPage={postsPerPage}
+                  totalPosts={data.length}
+                  paginate={paginate}
                 />
+              </div>
               )}
             />
-
+            
+           
             <Route path="/TermsDescription/:id/" component={TermsDescription} />
             <Route
               path="/AddTermForm"
@@ -53,6 +70,9 @@ const App = () => {
           </Switch>
         </BrowserRouter>
       </header>
+    
+    
+
     </div>
   );
 };
