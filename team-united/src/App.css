@@ -107,7 +107,12 @@ textarea{
   flex-direction: row;
   justify-content: center;
 }
-
+/* .child{
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  
+} */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

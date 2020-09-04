@@ -33,45 +33,39 @@ const TermsDescription = (props) => {
               </button>
             </Link>
           </div>
-          <div className="divTable">
-            <div className="divTableBody">
-              <div className="divTableRow">
-                <div className="divTableCell">
-                  <b>Terms</b>
-                </div>
-                <div className="divTableCell">
-                  <b>Description</b>
-                </div>
-                <div className="divTableCell">
-                  <b>Action</b>
-                </div>
+          <div className="container">
+            <div className="child">
+              <div>
+                <h5>Term: {singleData.name}</h5>
               </div>
-              <div className="divTableRow">
-                <div className="divTableCell">{singleData.name}</div>
-                <div className="divTableCell">
-                  {singleData.description}
-
-                  <div>
-                    <a href={singleData.link}>{singleData.link}</a>
-                  </div>
-                </div>
-                <div className="divTableCell">
-                  <Link to={`/EditTermForm/${props.match.params.id}`}>
-                    <button className="bg-green-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded ml-4 mt-4">
-                      Edit
-                    </button>
-                  </Link>
-
-                  <button
-                    onClick={(e) => { 
-                      if (window.confirm('Are you sure you wish to delete this term?'))
-                           deleteTerm(props.match.params.id);
-                    }}
-                       className="bg-red-500 hover:bg-blue-700 text-white font-bold py-1 px-1 rounded ml-4 mt-4"
-                  >
-                    Delete
+              <div>
+                <h5>Description:</h5>
+                <p>{singleData.description}</p>
+              </div>
+              <div>
+                <h5>Additional Information</h5>
+                <a href={singleData.link}>{singleData.link}</a>
+              </div>
+              <div>
+                <Link to={`/EditTermForm/${props.match.params.id}`}>
+                  <button className="bg-green-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded ml-4 mt-4">
+                    Edit
                   </button>
-                </div>
+                </Link>
+
+                <button
+                  onClick={(e) => {
+                    if (
+                      window.confirm(
+                        "Are you sure you wish to delete this term?"
+                      )
+                    )
+                      deleteTerm(props.match.params.id);
+                  }}
+                  className="bg-red-500 hover:bg-blue-700 text-white font-bold py-1 px-1 rounded ml-4 mt-4"
+                >
+                  Delete
+                </button>
               </div>
             </div>
           </div>
