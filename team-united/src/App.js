@@ -14,7 +14,7 @@ const App = () => {
   const [newTerm, setNewTerm] = useState(TermsData);
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage] = useState(5);
+  const [postsPerPage] = useState(20);
 
   /* add term function */
   const addTerm = (nTerm) => {
