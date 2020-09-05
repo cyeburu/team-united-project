@@ -8,26 +8,23 @@ const Pagination = (props) => {
     pageNumber.push(i);
   }
   
-  const nextChangeHandler=()=>{
-       if(props.currentPage<pageNumber.length-1){
-         props.setCurrentPage(props.currentPage+1);
-       }else{
-         props.setCurrentPage(1);
-       }
-  }
-   const previousChangeHandler=()=>{
-     if(props.currentPage>1){
-         props.setCurrentPage(props.currentPage-1);
-     }else{
-        props.setCurrentPage(pageNumber.length - 1);
-     }
-   }
-  
+  const nextChangeHandler = () => {
+    if (props.currentPage <= pageNumber.length - 1) {
+      props.setCurrentPage(props.currentPage + 1);
+    } else {
+      props.setCurrentPage(pageNumber.length + 1);
+    }
+  };
+  const previousChangeHandler = () => {
+    if (props.currentPage > 1) {
+       props.setCurrentPage(props.currentPage - 1);
+    }
+  };
   return (
      <div className = 'container flex '>
 
-      <button
-        className="page-link justify-content-center"
+      <button 
+        className="page-link justify-content-center btn"
         onClick={previousChangeHandler}
       >
         Previous
@@ -54,7 +51,7 @@ const Pagination = (props) => {
         </ul>
       </nav>
       <button
-        className="page-link justify-content-center"
+        className="page-link justify-content-center btn"
         onClick={nextChangeHandler}
       >
         Next

@@ -42,9 +42,10 @@ const TermsDescription = (props) => {
                 <h5>Description:</h5>
                 <p>{singleData.description}</p>
               </div>
-              <div>
+              <div className ='link-flex' >
                 <h5>Additional Information</h5>
-                <a href={singleData.link}>{singleData.link}</a>
+                <a href={singleData.link1}>{singleData.link1}</a>
+                <a href={singleData.link2}>{singleData.link2}</a>
               </div>
               <div>
                 <Link to={`/EditTermForm/${props.match.params.id}`}>

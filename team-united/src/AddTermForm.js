@@ -11,8 +11,9 @@ const AddTermForm = (props) => {
     id: null,
     name: "",
     description: "",
-    link: "",
-    link2: "",
+    link1:"",
+    link2:""
+  
   };
 
   const [newTerm, setNewTerm] = useState(initialFormState);
@@ -20,7 +21,7 @@ const AddTermForm = (props) => {
   const inputChangeHandler = (event) => {
     const { name, value } = event.target;
     setNewTerm({ ...newTerm, [name]: value });
-    console.log(name);
+    console.log(newTerm);
   };
 
   const onSubmit = async () => {
@@ -105,8 +106,8 @@ const AddTermForm = (props) => {
           ref={register({ required: "LINK REQUIRED" })}
           placeholder="Url for further information"
           type="url"
-          name="link"
-          defaultValue={newTerm.link}
+          name="link1"
+          defaultValue={newTerm.link1}
           onChange={inputChangeHandler}
         />
         {errors.link && <p>{errors.link.message}</p>}

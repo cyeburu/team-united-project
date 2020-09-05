@@ -107,12 +107,29 @@ textarea{
   flex-direction: row;
   justify-content: center;
 }
+ .backrd-clr{
+   background-color: rgb(0, 134, 250);
+   color:white;
+    
+  }
+  .backrd-clr2{
+     background-color: white;
+   color:rgb(0, 134, 250);
+  }
 /* .child{
   position: absolute;
   top: 20%;
   left: 30%;
   
 } */
+.link-flex{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.btn{
+  height: 38px;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
