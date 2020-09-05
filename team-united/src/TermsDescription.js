@@ -36,14 +36,14 @@ const TermsDescription = (props) => {
           <div className="container">
             <div className="child">
               <div>
-                <h5>Term: {singleData.name}</h5>
+                <h5><b>Term: </b>{singleData.name}</h5>
               </div>
               <div>
-                <h5>Description:</h5>
+                <h5><b>Description:</b></h5>
                 <p>{singleData.description}</p>
               </div>
               <div className ='link-flex' >
-                <h5>Additional Information</h5>
+                <h5><b>Additional Information</b></h5>
                 <a href={singleData.link1}>{singleData.link1}</a>
                 <a href={singleData.link2}>{singleData.link2}</a>
               </div>

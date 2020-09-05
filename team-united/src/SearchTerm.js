@@ -9,7 +9,7 @@ const SearchTerm = ({ search, setSearch }) => {
     <div>
       <input
         className="border-2 border-gray-300 bg-white h-10 px-5 pr-10 rounded-lg text-lg focus:outline-none"
-        type="text"
+        type="search"
         onChange={handleChange}
         value={search}
         placeholder="search for a term"
