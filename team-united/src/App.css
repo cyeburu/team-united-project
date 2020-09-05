@@ -11,8 +11,12 @@
   display: flex;
 }
 header {
-  background: red;
-  height: 3.5em;
+  background:lightblue;
+  height: 4em;
+  background-image: url('https://codeyourfuture.io/wp-content/uploads/2019/03/cyf_brand.png');
+  background-position: 40px 5px;
+  background-repeat: no-repeat;
+  background-size: 150px;
 }
 
 .nav {
@@ -33,8 +37,6 @@ header {
 .backBtn {
   margin-top: -21px;
 }
-
-
 
 .title {
   color: white;
@@ -84,6 +86,7 @@ ul.list-group.list-group-striped li:nth-of-type(even) {
   flex-direction: column;
 }
 input {
+  position: relative;
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -91,6 +94,26 @@ input {
   border: 2px solid black;
   border-radius: 4px;
   font-size: 10px;
+}
+select{
+  position: relative;
+  right: -400px;
+  font-size: 20px;
+  top: -45px;
+  position: relative;
+}
+
+input[type=search] { 
+  position: relative;
+  left: 300px;
+  top: -45px;
+  box-sizing: border-box;
+  background-image: url('https://www.w3schools.com/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 120%;
+
+     
 }
 textarea{
   width: 100%;
