@@ -11,7 +11,7 @@ const EditTermForm = (props) => {
     id: null,
     name: "",
     description: "",
-    link: "",
+    link1: "",
     link2: "",
   };
 
@@ -69,8 +69,8 @@ const EditTermForm = (props) => {
         <label htmlFor="link">Link1: </label>
         <input
           type="url"
-          name="link"
-          defaultValue={newTerm.link}
+          name="link1"
+          defaultValue={newTerm.link1}
           onChange={inputChangeHandler}
         />
     
