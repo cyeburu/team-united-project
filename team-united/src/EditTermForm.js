@@ -46,7 +46,9 @@ const EditTermForm = (props) => {
             Back
           </button>
         </Link>
-        <h3 className="text-center mb-4 text-muted">Edit A Term</h3>
+        <div className="editTerm">
+        <h3 className="text-center  text-muted">Edit A Term</h3>
+        </div>
       </div>
       <form onSubmit={e => onSubmit(e)} className="container">
         <label htmlFor="Terms">Term:</label>

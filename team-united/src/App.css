@@ -11,8 +11,15 @@
   display: flex;
 }
 header {
-  background: red;
-  height: 3.5em;
+
+  background:lightblue;
+  height: 3.7em;
+  background-image: url('https://codeyourfuture.io/wp-content/uploads/2019/03/cyf_brand.png');
+  background-position: 140px 4px;
+  background-repeat: no-repeat;
+  background-size: 150px; 
+ 
+
 }
 
 .nav {
@@ -23,22 +30,44 @@ header {
 }
 
 #addTerm {
-  margin: -11px 0;
-  right: 0;
-  position: fixed;
-  padding-top: -200px;
-  padding-right: 120px;
+  
+  right:-1050px;
+  position: relative;
+  top:-11px;
+ 
 }
 
 .backBtn {
-  margin-top: -21px;
+  position: relative;
+  width: 100%;
+  top:-12px;
+  right:-300px;
+ 
 }
 
+.editTerm {
+  position: relative;
+  width: 100%;
+  top:10px;
+  padding:10px;
+  right:300px;
+ 
+}
+.addTermText{
+  position: relative;
+  width: 100%;
+  top:10px;
+  padding:10px;
+  right:300px;
+ 
 
+}
 
 .title {
   color: white;
   text-align: center;
+  padding:20px;
+  
 }
 ul.list-group.list-group-striped li:nth-of-type(odd) {
   background: rgb(220, 216, 216);
@@ -82,8 +111,10 @@ ul.list-group.list-group-striped li:nth-of-type(even) {
 .container {
   display: flex;
   flex-direction: column;
+  padding:40px;
 }
 input {
+  position: relative;
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -92,6 +123,24 @@ input {
   border-radius: 4px;
   font-size: 10px;
 }
+
+select{
+  position: relative;
+  right:-420px;
+  font-size: 20px;
+
+}
+
+input[type=search]{
+  position: relative;
+  right:-290px;
+  box-sizing: border-box;
+  background-image: url('https://www.w3schools.com/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 120%;
+}
+
 textarea{
   width: 100%;
   height: 120px;

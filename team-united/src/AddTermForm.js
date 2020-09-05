@@ -63,7 +63,9 @@ const AddTermForm = (props) => {
             Back
           </button>
         </Link>
+        <div className="addTermText">
         <h3 className="text-center mb-4 text-muted">New Term</h3>
+        </div>
       </div>
       <div>
         <ErrorMessage errors={errors} name="singleErrorInput" />
