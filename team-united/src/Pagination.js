@@ -9,19 +9,19 @@ const Pagination = (props) => {
   }
   
   const nextChangeHandler=()=>{
-       if(props.currentPage<pageNumber.length-1){
-         props.setCurrentPage(props.currentPage+1);
-       }else{
-         props.setCurrentPage(1);
-       }
+    if(props.currentPage<=pageNumber.length-1){
+      props.setCurrentPage(props.currentPage+1);
+    }else{
+       props.setCurrentPage(pageNumber.length + 1)
+    }
+}
+const previousChangeHandler=()=>{
+  if(props.currentPage > 1){
+      props.setCurrentPage(props.currentPage - 1);
   }
-   const previousChangeHandler=()=>{
-     if(props.currentPage>1){
-         props.setCurrentPage(props.currentPage-1);
-     }else{
-        props.setCurrentPage(pageNumber.length - 1);
-     }
-   }
+}
+
+
   
   return (
      <div className = 'container flex '>
