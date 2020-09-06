@@ -20,9 +20,9 @@ const GlossaryList = (props) => {
    } )
 
    const results = fuse.search(search);
-   const nameResults = search ? results.map(result => result.item) : props.sortData;
+   const nameResults = search ? results.map((item => item.item)) : props.sortData;
  
-   console.log(results);
+   console.log(nameResults);
 
   return (
     <div>
@@ -40,7 +40,7 @@ const GlossaryList = (props) => {
           <h1 className="title">Code Your Future Glossary</h1>
           <h3>
             <ul className="container  list-unstyled list-group list-group-striped col-md-10">
-              {nameResults
+            {nameResults
                 .filter((categoryFilter) =>
                   categoryFilter.name[0]
                     .toLowerCase()
@@ -62,6 +62,7 @@ const GlossaryList = (props) => {
                     </li>
                   );
                 })}
+                
             </ul>
           </h3>
         </div>

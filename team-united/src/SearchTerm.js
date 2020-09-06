@@ -2,7 +2,7 @@ import React from "react";
 
 const SearchTerm = ({ search, setSearch }) => {
    
-    function handleOnSearch({ currentTarget = {} }) {
+    function handleOnSearch({ currentTarget }) {
       const { value } = currentTarget;
       setSearch(value);//try event.target.value
     }
