@@ -46,8 +46,7 @@ const GlossaryList = (props) => {
                     .toLowerCase()
                     .includes(categoriseFilter.toLowerCase())
                 )
-                .filter((terms) =>
-                  terms.name.toLowerCase().includes(search.toLowerCase())
+                .filter((terms) =>terms.name.toLowerCase().indexOf(search.toLowerCase().includes(search))
                 )
                 .map((terms, index) => {
                   return (
