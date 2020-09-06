@@ -1,13 +1,11 @@
 import React from "react";
 
 const Pagination = (props) => {
-   
-  
   const pageNumber = [];
   for (let i = 1; i < Math.ceil(props.totalPosts / props.postsPerPage); i++) {
     pageNumber.push(i);
   }
-  
+
   const nextChangeHandler = () => {
     if (props.currentPage <= pageNumber.length - 1) {
       props.setCurrentPage(props.currentPage + 1);
@@ -17,13 +15,12 @@ const Pagination = (props) => {
   };
   const previousChangeHandler = () => {
     if (props.currentPage > 1) {
-       props.setCurrentPage(props.currentPage - 1);
+      props.setCurrentPage(props.currentPage - 1);
     }
   };
   return (
-     <div className = 'container flex '>
-
-      <button 
+    <div className="container flex ">
+      <button
         className="page-link justify-content-center btn"
         onClick={previousChangeHandler}
       >

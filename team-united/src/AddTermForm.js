@@ -11,9 +11,8 @@ const AddTermForm = (props) => {
     id: null,
     name: "",
     description: "",
-    link1:"",
-    link2:""
-  
+    link1: "",
+    link2: "",
   };
 
   const [newTerm, setNewTerm] = useState(initialFormState);
@@ -46,13 +45,14 @@ const AddTermForm = (props) => {
   };
   const doesTermExist = (nTerm) => {
     const filterData = props.data.filter((term) => {
-      return (
-        term.name.toLowerCase() === nTerm ||
-        term.name.toUpperCase() === nTerm
+      console.log("term.name", term.name);
+      console.log("nTerm", nTerm);
 
+      return (
+        term.name.toLowerCase() === nTerm.toLowerCase()
+        
       );
     });
-
     return filterData.length;
   };
   return (
@@ -64,7 +64,7 @@ const AddTermForm = (props) => {
           </button>
         </Link>
         <div className="addTermText">
-        <h3 className="text-center mb-4 text-muted">New Term</h3>
+          <h3 className="text-center mb-4 text-muted">New Term</h3>
         </div>
       </div>
       <div>

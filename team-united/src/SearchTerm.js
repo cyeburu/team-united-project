@@ -1,9 +1,9 @@
 import React from "react";
 
 const SearchTerm = ({ search, setSearch }) => {
-  const handleChange=(event)=> {
+  const handleChange = (event) => {
     setSearch(event.target.value);
-  }
+  };
 
   return (
     <div>
@@ -13,7 +13,6 @@ const SearchTerm = ({ search, setSearch }) => {
         onChange={handleChange}
         value={search}
         placeholder="search for a term"
-    
       />
     </div>
   );
