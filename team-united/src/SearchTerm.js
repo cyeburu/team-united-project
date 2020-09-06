@@ -4,7 +4,7 @@ const SearchTerm = ({ search, setSearch }) => {
   const handleChange = (event) => {
     setSearch(event.target.value);
   };
-
+/*new*/
   return (
     <div>
       <input
