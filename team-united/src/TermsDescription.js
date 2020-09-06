@@ -17,7 +17,7 @@ const TermsDescription = (props) => {
   /*delete term functionality*/
   const deleteTerm = async (id) => {
     await axios.delete(
-      `https://cyf-glossary-backend.herokuapp.com/all-terms/${id}`
+      `https://cyf-glossary-backend.herokuapp.com/all-terms/${props.match.params.id}`
     );
     alert(" The following record has been deleted");
     window.location = "/";
@@ -36,14 +36,21 @@ const TermsDescription = (props) => {
           <div className="container">
             <div className="child">
               <div>
-                <h5><b>Term: </b>{singleData.name}</h5>
+                <h5>
+                  <b>Term: </b>
+                  {singleData.name}
+                </h5>
               </div>
               <div>
-                <h5><b>Description:</b></h5>
+                <h5>
+                  <b>Description:</b>
+                </h5>
                 <p>{singleData.description}</p>
               </div>
-              <div className ='link-flex' >
-                <h5><b>Additional Information:</b></h5>
+              <div className="link-flex">
+                <h5>
+                  <b>Additional Information:</b>
+                </h5>
                 <a href={singleData.link1}>{singleData.link1}</a>
                 <a href={singleData.link2}>{singleData.link2}</a>
               </div>

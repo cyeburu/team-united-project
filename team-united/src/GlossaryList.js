@@ -15,7 +15,12 @@ const GlossaryList = (props) => {
           <div className="nav">
             <div id="addTerm">
               <button className="bg-green-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded ml-4 mt-4">
-                <Link to={`/AddTermForm/`}style={{ textDecoration: 'none', color: 'white' }}>Add Term</Link>
+                <Link
+                  to={`/AddTermForm/`}
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Add Term
+                </Link>
               </button>
             </div>
             <SearchTerm search={search} setSearch={setSearch} />
