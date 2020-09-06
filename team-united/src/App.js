@@ -15,7 +15,7 @@ const App = () => {
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(5);
-
+  console.log();
   /* add term function */
   const addTerm = (nTerm) => {
     nTerm.id = newTerm.length + 1;
@@ -28,11 +28,11 @@ const App = () => {
       .then((Result) => setData(Result.data));
   }, []);
 
+  data.sort((a, b) => a.name.localeCompare(b.name));
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPost = data.slice(indexOfFirstPost, indexOfLastPost);
   const convertedData = Object.values(currentPost);
-  let sortData = convertedData.sort((a, b) => a.name.localeCompare(b.name));
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
   return (
@@ -48,7 +48,7 @@ const App = () => {
                   <GlossaryList
                     data={currentPost}
                     convertedData={convertedData}
-                    sortData={sortData}
+                    allData={data}
                   />
                   <Pagination
                     postsPerPage={postsPerPage}

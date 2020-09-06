@@ -8,6 +8,8 @@ const GlossaryList = (props) => {
   const [search, setSearch] = useState("");
   const [categoriseFilter, setCategoriseFilter] = useState("");
 
+  const searchResult = search ? props.allData : props.convertedData;
+
   return (
     <div>
       {props.convertedData !== null ? (
@@ -29,28 +31,29 @@ const GlossaryList = (props) => {
           <h1 className="title">Code Your Future Glossary</h1>
           <h3>
             <ul className="container  list-unstyled list-group list-group-striped col-md-10">
-              {props.sortData
-                .filter((categoryFilter) =>
-                  categoryFilter.name[0]
-                    .toLowerCase()
-                    .includes(categoriseFilter.toLowerCase())
-                )
-                .filter((terms) =>
-                  terms.name.toLowerCase().includes(search.toLowerCase())
-                )
-                .map((terms, index) => {
-                  return (
-                    <li className="col-12" key={index}>
-                      <Link
-                        to={{
-                          pathname: `/TermsDescription/${terms._id}`,
-                        }}
-                      >
-                        {terms.name}
-                      </Link>
-                    </li>
-                  );
-                })}
+              {searchResult &&
+                searchResult
+                  .filter((categoryFilter) =>
+                    categoryFilter.name[0]
+                      .toLowerCase()
+                      .includes(categoriseFilter.toLowerCase())
+                  )
+                  .filter((terms) =>
+                    terms.name.toLowerCase().includes(search.toLowerCase())
+                  )
+                  .map((terms, index) => {
+                    return (
+                      <li className="col-12" key={index}>
+                        <Link
+                          to={{
+                            pathname: `/TermsDescription/${terms._id}`,
+                          }}
+                        >
+                          {terms.name}
+                        </Link>
+                      </li>
+                    );
+                  })}
             </ul>
           </h3>
         </div>

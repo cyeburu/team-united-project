@@ -31,7 +31,7 @@ const EditTermForm = (props) => {
       `https://cyf-glossary-backend.herokuapp.com/all-terms/${props.match.params.id}`,
       newTerm
     );
-    history.push("/");
+    window.location = "/";
   };
 
   const loadTerm = async () => {
