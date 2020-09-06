@@ -14,7 +14,7 @@ const EditTermForm = (props) => {
   };
 
   const [newTerm, setNewTerm] = useState(initialFormState);
-  //console.log(newTerm);
+  
 
   const inputChangeHandler = (event) => {
     const { name, value } = event.target;

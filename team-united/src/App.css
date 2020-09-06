@@ -1,5 +1,10 @@
+body{
+ overflow-x: hidden;
+}
+
 .App {
   text-align: center;
+ 
 }
 
 .App-logo {
@@ -165,12 +170,18 @@ textarea{
      background-color: white;
    color:rgb(0, 134, 250);
   }
-/* .child{
-  position: absolute;
-  top: 20%;
-  left: 30%;
   
-} */
+  .desc-section{
+    margin-bottom: 100px;
+   
+  }
+
+  .btn-section{
+    position: fixed;
+     top:-12px ;
+     right: 100px;
+    
+    }
 .link-flex{
   display: flex;
   flex-direction: column;
