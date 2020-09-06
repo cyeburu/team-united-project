@@ -1,21 +1,23 @@
 import React from "react";
-
-const SearchTerm = ({ search, setSearch}) => {
-  
-  const handleChange = (event) => {
-    setSearch(event.target.value);
-  };
-
+const SearchTerm = ({ search, setSearch }) => {
+    function handleOnSearch({ currentTarget }) {
+      const { value } = currentTarget;
+      setSearch(value);//try event.target.value
+    }
   return (
     <div>
       <input
-        className="border-2 border-gray-300 bg-white h-10 px-5 pr-10 rounded-lg text-lg focus:outline-none"
+        className="border-2 border-gray-100 bg-white h-10 px-5 pr-10 rounded-lg text-lg glyphicon glyphicon-search"
         type="search"
-        onChange={handleChange}
+        onChange={handleOnSearch}
         value={search}
-        placeholder="search for a term"
+        placeholder="search for a term..."
       />
+      <button type="submit"><i className="fa fa-search"></i></button>
     </div>
   );
 };
 export default SearchTerm;
+
+
+

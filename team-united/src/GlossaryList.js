@@ -1,14 +1,27 @@
 import React, { useState } from "react";
 import SearchTerm from "./SearchTerm";
 import { Link } from "react-router-dom";
-
 import CatergoriseFilter from "./CategoriseFilter";
+import Fuse from "fuse.js";
 
 const GlossaryList = (props) => {
   const [search, setSearch] = useState("");
   const [categoriseFilter, setCategoriseFilter] = useState("");
 
-  const searchResult = search ? props.allData : props.convertedData;
+ 
+    
+
+    const fuse = new Fuse(props.allData, {
+      keys: [
+        "name"
+      ],
+          includeScore: true,
+          
+      })
+      const searchResult = search ? props.allData : props.convertedData;
+      const results = fuse.search(search);
+      const nameResults = search ? results.map((item => item.item)) : props.convertedData;
+      console.log(nameResults);
 
   return (
     <div>
@@ -31,16 +44,16 @@ const GlossaryList = (props) => {
           <h1 className="title">Code Your Future Glossary</h1>
           <h3>
             <ul className="container  list-unstyled list-group list-group-striped col-md-10">
-              {searchResult &&
-                searchResult
+              {searchResult && searchResult && nameResults
                   .filter((categoryFilter) =>
                     categoryFilter.name[0]
                       .toLowerCase()
                       .includes(categoriseFilter.toLowerCase())
                   )
                   .filter((terms) =>
-                    terms.name.toLowerCase().includes(search.toLowerCase())
+                  terms.name.toLowerCase().indexOf(search.toLowerCase().includes(search))
                   )
+                  
                   .map((terms, index) => {
                     return (
                       <li className="col-12" key={index}>
