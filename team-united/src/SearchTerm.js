@@ -1,9 +1,10 @@
 import React from "react";
-const SearchTerm = ({ search, setSearch }) => {
-    function handleOnSearch({ currentTarget }) {
-      const { value } = currentTarget;
-      setSearch(value);//try event.target.value
-    }
+const SearchTerm = ({ search, setSearch, setCategoriseFilter }) => {
+  function handleOnSearch({ currentTarget }) {
+    const { value } = currentTarget;
+    setSearch(value); //try event.target.value
+    setCategoriseFilter('')
+  }
   return (
     <div>
       <input
@@ -13,7 +14,9 @@ const SearchTerm = ({ search, setSearch }) => {
         value={search}
         placeholder="search for a term..."
       />
-      <button type="submit"><i className="fa fa-search"></i></button>
+      <button type="submit">
+        <i className="fa fa-search"></i>
+      </button>
     </div>
   );
 };
