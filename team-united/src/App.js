@@ -35,7 +35,7 @@ const App = () => {
   useEffect(() => {
   
       ReactGa.initialize('UA-177373621-1')
-      ReactGa.pageview('/');
+      ReactGa.pageview('/App');
   }, []);
 
 
