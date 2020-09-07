@@ -13,6 +13,7 @@ const SearchTerm = ({ search, setSearch, setCategoriseFilter }) => {
         onChange={handleOnSearch}
         value={search}
         placeholder="search for a term..."
+        
       />
       <button type="submit">
         <i className="fa fa-search"></i>

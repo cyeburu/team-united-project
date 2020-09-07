@@ -1,5 +1,6 @@
 body{
  overflow-x: hidden;
+ 
 }
 
 .App {
@@ -173,7 +174,8 @@ textarea{
   }
   
   .desc-section{
-    margin-bottom: 100px;
+      margin: 7px;
+      
    
   }
 
