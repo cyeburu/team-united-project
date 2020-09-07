@@ -132,7 +132,8 @@ input {
 select{
   position: relative;
   right:-420px;
-  font-size: 20px;
+  font-size: 19px;
+  top:10px;
 
 }
 
