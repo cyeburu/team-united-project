@@ -1,14 +1,13 @@
-import React, { useState } from "react"; //useState
+import React from "react";
 
-const CatergoriseFilter = ({ setCategoriseFilter }) => {
+const CatergoriseFilter = ({ setCategoriseFilter, setSearch }) => {
   function handleSelect(event) {
     setCategoriseFilter(event.target.value);
+    setSearch("");
   }
 
   return (
     <div>
-      <h1></h1>
-
       <select
         defaultValue={"DEFAULT"}
         className="border-2 border-gray-300 bg-white h-10 px-4 pr-8 rounded-lg text-lg"
