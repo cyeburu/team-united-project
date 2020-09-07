@@ -4,21 +4,21 @@ import TermsDescription from "./TermsDescription";
 import AddTermForm from "./AddTermForm";
 import TermsData from "./TermsData.json";
 import Pagination from "./Pagination";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch, useLocation } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
 import "./App.css";
 import EditTermForm from "./EditTermForm";
 import ReactGa from "react-ga";
 
+ReactGa.initialize('UA-177373621-1')
 const App = () => {
  
-
-
   const [newTerm, setNewTerm] = useState(TermsData);
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(5);
+  const location = useLocation();
   console.log();
   /* add term function */
   const addTerm = (nTerm) => {
@@ -33,10 +33,8 @@ const App = () => {
   }, []);
 
   useEffect(() => {
-  
-      ReactGa.initialize('UA-177373621-1')
       ReactGa.pageview(window.location.pathname + window.location.search);
-  }, []);
+  }, [location]);
 
 
 
