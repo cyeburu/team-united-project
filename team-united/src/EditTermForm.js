@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 const EditTermForm = (props) => {
-  let history = useHistory();
-
   const initialFormState = {
     id: null,
     name: "",
@@ -23,22 +21,26 @@ const EditTermForm = (props) => {
 
   useEffect(() => {
     loadTerm();
+    
   }, []);
 
   const onSubmit = async (e) => {
     e.preventDefault();
     await axios.put(
+
       `https://cyf-glossary-backend.herokuapp.com/all-terms/${props.match.params.id}`,
       newTerm
     );
     window.location = "/";
-  };
 
-  const loadTerm = async () => {
-    const result = await axios.get(
-      `https://cyf-glossary-backend.herokuapp.com/all-terms/${props.match.params.id}`
-    );
-    setNewTerm(result.data);
+    } 
+
+  const loadTerm = () => {
+    const result = axios.get(
+      `https://cyf-glossary-backend.herokuapp.com/all-terms/${props.match.params.id}`)
+      .then((result) => setNewTerm(result.data));
+    
+    
   };
 
   return (
@@ -70,7 +72,7 @@ const EditTermForm = (props) => {
           onChange={inputChangeHandler}
         />
 
-        <label htmlFor="link">Link1: </label>
+        <label htmlFor="link">Link1: </label>``
         <input
           type="url"
           name="link1"

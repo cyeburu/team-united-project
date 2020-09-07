@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import CatergoriseFilter from "./CategoriseFilter";
 import Fuse from "fuse.js";
 
+
 const GlossaryList = (props) => {
   const [search, setSearch] = useState("");
   const [categoriseFilter, setCategoriseFilter] = useState("");
