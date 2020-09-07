@@ -3,6 +3,7 @@ import SearchTerm from "./SearchTerm";
 import { Link } from "react-router-dom";
 import CatergoriseFilter from "./CategoriseFilter";
 import Fuse from "fuse.js";
+import ReactGa from "react-ga";
 
 
 const GlossaryList = (props) => {
@@ -24,13 +25,20 @@ const GlossaryList = (props) => {
       const nameResults = search ? results.map((item => item.item)) : props.convertedData;
       console.log(nameResults);
 
+      const clickHandler = ()=> {
+        ReactGa.event({
+             category: 'Button',
+             action: 'Add button was clicked'
+        })
+      }
+
   return (
     <div>
       {props.convertedData !== null ? (
         <div>
           <div className="nav">
             <div id="addTerm">
-              <button className="bg-green-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded ml-4 mt-4">
+              <button onClick={clickHandler} className="bg-green-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded ml-4 mt-4">
                 <Link
                   to={`/AddTermForm/`}
                   style={{ textDecoration: "none", color: "white" }}
