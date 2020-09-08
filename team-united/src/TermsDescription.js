@@ -46,24 +46,10 @@ const TermsDescription = (props) => {
               <div>
                 <h5>
                   <b>Term:</b>
-                  <b> {singleData.name}</b>
+                  <b>{singleData.name}</b>
                 </h5>
               </div>
               <hr />
-<<<<<<< Updated upstream
-              <div className="desc-section">
-                <h5>
-                  <b>Description:</b>
-                </h5>
-                <p>{singleData.description}</p>
-              </div>
-              <div className="link-flex ">
-                <h5>
-                  <b>Additional Information:</b>
-                </h5>
-                <a href={singleData.link1}>{singleData.link1}</a>
-                <a href={singleData.link2}>{singleData.link2}</a>
-=======
               <div class="card w-100">
                 <h5 className="card-title">
                   <div className="desc-section">
@@ -87,7 +73,6 @@ const TermsDescription = (props) => {
                 <a href={singleData.link2} className="text-success">
                   {singleData.link2}
                 </a>
->>>>>>> Stashed changes
               </div>
               <div className="btn-section">
                 <Link to={`/EditTermForm/${props.match.params.id}`}>
