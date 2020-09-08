@@ -3,8 +3,10 @@ import { Link, withRouter } from "react-router-dom";
 import Axios from "axios";
 import { useForm } from "react-hook-form";
 import { ErrorMessage } from "@hookform/error-message";
+import { Editor } from '@tinymce/tinymce-react';
 
 const AddTermForm = (props) => {
+  const [description, setDescription] = useState("")
   const { register, handleSubmit, errors, setError, clearErrors } = useForm();
   /*this is updated version*/
   const initialFormState = {
@@ -12,42 +14,43 @@ const AddTermForm = (props) => {
     name: "",
     description: "",
     link1: "",
-    link2: "",
+    link2: ""
   };
-
+  console.log(description)
   const [newTerm, setNewTerm] = useState(initialFormState);
-
   const inputChangeHandler = (event) => {
     const { name, value } = event.target;
     setNewTerm({ ...newTerm, [name]: value });
     console.log(newTerm);
+    //console.log(event.editor)
+    console.log("content", event)
   };
-
+  //console.log(value)
+  console.log(newTerm)
+  const handleEditorChange = (content, editor) => {
+    setDescription(content)
+    //console.log(content)
+  }
   const onSubmit = async () => {
     clearErrors();
     if (doesTermExist(newTerm.name)) {
       return setError("name", {
         type: "manual",
-        message: "Term Already Exists in the database",
+        message: "Term Already Exists in the database"
       });
     }
-
     if (newTerm.name) {
       props.addTerm(newTerm);
       await Axios.post(
         "https://cyf-glossary-backend.herokuapp.com/all-terms",
-        newTerm
+        { newTerm, description: description }
       );
       alert("Your term has been added to the Glossary list");
-
       window.location = "/";
     }
   };
   const doesTermExist = (nTerm) => {
     const filterData = props.data.filter((term) => {
-      console.log("term.name", term.name);
-      console.log("nTerm", nTerm);
-
       return term.name.toLowerCase() === nTerm.toLowerCase();
     });
     return filterData.length;
@@ -74,8 +77,8 @@ const AddTermForm = (props) => {
             required: "ADDTERM REQUIRED",
             minLength: {
               value: 3,
-              message: "Addterm must be longer than 3 Characters ",
-            },
+              message: "Addterm must be longer than 3 Characters "
+            }
           })}
           placeholder="Term name"
           type="text"
@@ -85,21 +88,27 @@ const AddTermForm = (props) => {
         />
         {errors.name && <p>{errors.name.message}</p>}
         <label htmlFor="description">Description:</label>
-        <textarea
-          ref={register({
-            required: "DESCRIPTION REQUIRED",
-            minLength: {
-              value: 10,
-              message: "description must be longer than 10 Characters ",
-            },
-          })}
-          placeholder="Term description"
-          type="text"
+        <Editor
+          apiKey="hefzdovkwkmx36m31l5z711zg5dge8fhjaca8f8kdhcfy79i"
+          initialValue=""
           name="description"
-          defaultValue={newTerm.description}
-          onChange={inputChangeHandler}
+          init={{
+            height: 200,
+            menubar: false,
+            plugins: [
+              "advlist autolink lists link image charmap print preview anchor",
+              "searchreplace visualblocks code fullscreen",
+              "insertdatetime media table paste code help wordcount"
+            ],
+            toolbar:
+              "undo redo | formatselect | bold italic backcolor | \
+             alignleft aligncenter alignright alignjustify | \
+             bullist numlist outdent indent | removeformat | help"
+          }}
+          value={description}
+          onEditorChange={handleEditorChange}
         />
-        {errors.description && <p>{errors.description.message}</p>}
+        {errors.value && <p>{errors.value.message}</p>}
         <label htmlFor="link">Link1: </label>
         <input
           ref={register({ required: "LINK REQUIRED" })}
