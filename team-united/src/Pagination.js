@@ -20,12 +20,18 @@ const Pagination = (props) => {
   };
   return (
     <div className="container flex ">
+      <div className="buttonPrevnNext">
+
       <button
         className="page-link justify-content-center btn"
         onClick={previousChangeHandler}
       >
-        Previous
-      </button>
+          Previous
+          </button>
+      </div>
+     
+      
+     
       <nav aria-label="...">
         <ul className="pagination justify-content-center ">
           {pageNumber.map((number) => {
@@ -47,12 +53,14 @@ const Pagination = (props) => {
           })}
         </ul>
       </nav>
+      <div className="buttonPrevnNext">
       <button
         className="page-link justify-content-center btn"
         onClick={nextChangeHandler}
       >
         Next
       </button>
+      </div>
     </div>
   );
 };
