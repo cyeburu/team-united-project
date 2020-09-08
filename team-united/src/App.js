@@ -11,6 +11,7 @@ import "./App.css";
 import EditTermForm from "./EditTermForm";
 import ReactGa from "react-ga";
 
+//tidy up done
 const App = () => {
   const [newTerm, setNewTerm] = useState(TermsData);
   const [data, setData] = useState([]);
