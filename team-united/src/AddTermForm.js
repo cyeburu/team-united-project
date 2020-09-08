@@ -48,10 +48,7 @@ const AddTermForm = (props) => {
       console.log("term.name", term.name);
       console.log("nTerm", nTerm);
 
-      return (
-        term.name.toLowerCase() === nTerm.toLowerCase()
-        
-      );
+      return term.name.toLowerCase() === nTerm.toLowerCase();
     });
     return filterData.length;
   };
