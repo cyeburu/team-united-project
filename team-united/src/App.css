@@ -1,124 +1,129 @@
+<<<<<<< Updated upstream
 body{
  overflow-x: hidden;
+=======
+body {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 18px;
+	font-weight: normal;
+>>>>>>> Stashed changes
 }
 
 .App {
-  text-align: center;
- 
+	text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+	height: 40vmin;
+	pointer-events: none;
 }
 
 .btn-flex {
-  display: flex;
+	display: flex;
 }
+
 header {
-
-  background:lightblue;
-  height: 3.7em;
-  background-image: url('https://codeyourfuture.io/wp-content/uploads/2019/03/cyf_brand.png');
-  background-position: 140px 4px;
-  background-repeat: no-repeat;
-  background-size: 150px; 
- 
-
+	background: lightblue;
+	height: 3.7em;
+	background-image: url('https://codeyourfuture.io/wp-content/uploads/2019/03/cyf_brand.png');
+	background-position: 140px 4px;
+	background-repeat: no-repeat;
+	background-size: 150px;
+	font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .nav {
-  display: flex;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  border-radius: 4%;
-  text-align: center;
+	display: flex;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	border-radius: 4%;
+	text-align: center;
 }
 
 #addTerm {
-  
-  right:-1050px;
-  position: relative;
-  top:-11px;
- 
+	right: -1050px;
+	position: relative;
+	top: -11px;
 }
 
 .backBtn {
-  position: relative;
-  width: 100%;
-  top:-12px;
-  right:-300px;
- 
+	position: relative;
+	width: 100%;
+	top: -12px;
+	right: -300px;
 }
 
 .editTerm {
-  position: relative;
-  width: 100%;
-  top:10px;
-  padding:10px;
-  right:300px;
- 
+	position: relative;
+	width: 100%;
+	top: 10px;
+	padding: 10px;
+	right: 300px;
 }
-.addTermText{
-  position: relative;
-  width: 100%;
-  top:10px;
-  padding:10px;
-  right:300px;
- 
 
+.addTermText {
+	position: relative;
+	width: 100%;
+	top: 10px;
+	padding: 10px;
+	right: 300px;
 }
 
 .title {
-  color: white;
-  text-align: center;
-  padding:20px;
-  
+	color: white;
+	text-align: center;
+	padding: 20px;
 }
+
 ul.list-group.list-group-striped li:nth-of-type(odd) {
-  background: rgb(220, 216, 216);
-  padding: 20px;
+	background: rgb(220, 216, 216);
+	padding: 20px;
 }
+
 ul.list-group.list-group-striped li:nth-of-type(even) {
-  background: white;
-  padding: 20px;
+	background: white;
+	padding: 20px;
 }
+
 .css-grid-table,
 .css-grid-table-header,
 .css-grid-table-body {
-  display: grid;
+	display: grid;
 }
 
 .css-grid-table {
-  grid-template-rows: 24px 72px;
-  width: 80%;
+	grid-template-rows: 24px 72px;
+	width: 80%;
 }
 
 .css-grid-table-header,
 .css-grid-table-body {
-  grid-template-columns: auto auto auto minmax(150px, 25%);
-  line-height: 44px;
+	grid-template-columns: auto auto auto minmax(150px, 25%);
+	line-height: 44px;
 }
 
 .css-grid-table-header {
-  grid-column-gap: 2px;
-  grid-template-rows: auto;
+	grid-column-gap: 2px;
+	grid-template-rows: auto;
 }
 
 .css-grid-table-body {
-  grid-template-rows: auto auto auto;
+	grid-template-rows: auto auto auto;
 }
 
 .css-grid-table-header div {
-  text-align: center;
-  font-weight: bold;
-  background-color: rgb(191, 191, 191);
+	text-align: center;
+	font-weight: bold;
+	background-color: rgb(191, 191, 191);
 }
+
 .container {
-  display: flex;
-  flex-direction: column;
-  padding:40px;
+	display: flex;
+	flex-direction: column;
+	padding: 40px;
 }
+
 input {
+<<<<<<< Updated upstream
   position: relative;
   width: 100%;
   padding: 12px 20px;
@@ -190,69 +195,149 @@ textarea{
 }
 .btn{
   height: 38px;
+=======
+	position: relative;
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	border: 2px solid black;
+	border-radius: 4px;
+	font-size: 10px;
 }
+
+select {
+	position: relative;
+	right: -420px;
+	font-size: 19px;
+	top: 10px;
+}
+
+input[type=search] {
+	position: relative;
+	right: -290px;
+	box-sizing: border-box;
+	background-image: url('https://www.w3schools.com/css/searchicon.png');
+	background-position: 10px 10px;
+	background-repeat: no-repeat;
+	width: 120%;
+}
+
+textarea {
+	width: 100%;
+	height: 120px;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	border: 2px solid black;
+	border-radius: 4px;
+	font-size: 10px;
+}
+
+.flex {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.backrd-clr {
+	background-color: rgb(0, 134, 250);
+	color: white;
+>>>>>>> Stashed changes
+}
+
+.backrd-clr2 {
+	background-color: white;
+	color: rgb(0, 134, 250);
+}
+
+.desc-section {
+	margin: 7px;
+}
+
+.btn-section {
+	position: fixed;
+	top: -12px;
+	right: 100px;
+}
+
+.link-flex {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.btn {
+	height: 38px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+	.App-logo {
+		animation: App-logo-spin infinite 20s linear;
+	}
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  
+	background-color: #282c34;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
 }
 
 .App-link {
-  color: #61dafb;
+	color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
 }
 
 .title {
-  color: black;
-  font-family: Georgia, "Times New Roman", Times, serif;
+	color: black;
+	font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .divTable {
-  display: table;
-  width: 100%;
+	display: table;
+	width: 100%;
 }
+
 .divTableRow {
-  display: table-row;
+	display: table-row;
 }
+
 .divTableHeading {
-  background-color: #eee;
-  display: table-header-group;
+	background-color: #eee;
+	display: table-header-group;
 }
+
 .divTableCell,
 .divTableHead {
-  border: 1px solid #999999;
-  display: table-cell;
-  padding: 3px 10px;
+	border: 1px solid #999999;
+	display: table-cell;
+	padding: 3px 10px;
 }
+
 .divTableHeading {
-  background-color: #eee;
-  display: table-header-group;
-  font-weight: bold;
+	background-color: #eee;
+	display: table-header-group;
+	font-weight: bold;
 }
+
 .divTableFoot {
-  background-color: #eee;
-  display: table-footer-group;
-  font-weight: bold;
+	background-color: #eee;
+	display: table-footer-group;
+	font-weight: bold;
 }
+
 .divTableBody {
-  display: table-row-group;
+	display: table-row-group;
 }

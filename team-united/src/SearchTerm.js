@@ -2,8 +2,8 @@ import React from "react";
 const SearchTerm = ({ search, setSearch, setCategoriseFilter }) => {
   function handleOnSearch({ currentTarget }) {
     const { value } = currentTarget;
-    setSearch(value); //try event.target.value
-    setCategoriseFilter('')
+    setSearch(value); 
+    setCategoriseFilter("");
   }
   return (
     <div>
@@ -21,6 +21,3 @@ const SearchTerm = ({ search, setSearch, setCategoriseFilter }) => {
   );
 };
 export default SearchTerm;
-
-
-
