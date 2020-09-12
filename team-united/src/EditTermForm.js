@@ -50,11 +50,7 @@ const EditTermForm = (props) => {
       newTerm
     );
     window.location = "/";
-
-
-    
-  } 
-
+  };
 
   const loadTerm = () => {
     const result = axios
@@ -63,17 +59,6 @@ const EditTermForm = (props) => {
       )
       .then((result) => setNewTerm(result.data));
   };
-// const doesTermExist = (nTerm) => {
-//   const filterData = data.filter((term) => {
-//     return term.name.toLowerCase() === nTerm.toLowerCase();
-//   });
-//   return filterData.length;
-// };
-
- const offensiveTermPrevention = (nTerm) => {
-   const filterTerms = array.filter((badTerm) => {
-     return badTerm.toLowerCase().includes(nTerm.toLowerCase());
-   });
 
   const offensiveTermPrevention = (nTerm) => {
     const filterTerms = array.filter((badTerm) => {
@@ -149,7 +134,6 @@ const EditTermForm = (props) => {
         <button className="btn btn-warning btn-block">Update Term</button>
       </form>
     </div>
-   );
- }
+  );
 };
 export default EditTermForm;
