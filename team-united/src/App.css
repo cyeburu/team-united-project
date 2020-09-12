@@ -445,7 +445,7 @@ body {
 	}
   
 	.btn-section {
-	  position: fixed;
+	  position: absolute;
 	  top: -12px;
 	  right: 10px;
 	}
