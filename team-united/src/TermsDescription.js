@@ -10,7 +10,7 @@ const TermsDescription = (props) => {
   const clickHandler = () => {
     ReactGa.event({
       category: "Button",
-      action: "Edit button was clicked",
+      action: "Edit button was clicked"
     });
   };
 
@@ -45,34 +45,23 @@ const TermsDescription = (props) => {
             <div className="child">
               <div>
                 <h5>
-                  <b>Term:</b>
-                  <b>{singleData.name}</b>
+                  <b>Term: </b>
+                  {singleData.name}
                 </h5>
               </div>
               <hr />
-              <div class="card w-100">
-                <h5 className="card-title">
-                  <div className="desc-section">
-                    <b>Description:</b>
-                  </div>
+              <div className="desc-section">
+                <h5>
+                  <b>Description:</b>
                 </h5>
-                <div className="desc-section">
-                  <p className="card-text bg-light">{singleData.description}</p>
-                </div>
+                <p>{singleData.description}</p>
               </div>
               <div className="link-flex ">
                 <h5>
-                  <div className="desc-section">
-                    <b className="text-justify">Additional Information:</b>
-                  </div>
+                  <b>Additional Information:</b>
                 </h5>
-
-                <a href={singleData.link1} className="text-success">
-                  {singleData.link1}
-                </a>
-                <a href={singleData.link2} className="text-success">
-                  {singleData.link2}
-                </a>
+                <a href={singleData.link1}>{singleData.link1}</a>
+                <a href={singleData.link2}>{singleData.link2}</a>
               </div>
               <div className="btn-section">
                 <Link to={`/EditTermForm/${props.match.params.id}`}>
