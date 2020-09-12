@@ -11,10 +11,8 @@ import "./App.css";
 import EditTermForm from "./EditTermForm";
 import ReactGa from "react-ga";
 
+//tidy up done
 const App = () => {
- 
-
-
   const [newTerm, setNewTerm] = useState(TermsData);
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -29,16 +27,14 @@ const App = () => {
   useEffect(() => {
     axios
       .get(`https://cyf-glossary-backend.herokuapp.com/all-terms`)
-      .then((Result) => setData(Result.data));
+      .then((Result) => setData(Result.data)
+      )
   }, []);
 
   useEffect(() => {
-  
-      ReactGa.initialize('UA-177373621-1')
-      ReactGa.pageview(window.location.pathname + window.location.search);
+    ReactGa.initialize("UA-177373621-1");
+    ReactGa.pageview(window.location.pathname + window.location.search);
   }, []);
-
-
 
   data.sort((a, b) => a.name.localeCompare(b.name));
   const indexOfLastPost = currentPage * postsPerPage;

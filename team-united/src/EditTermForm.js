@@ -16,7 +16,8 @@ const EditTermForm = (props) => {
   };
 
   const [newTerm, setNewTerm] = useState(initialFormState);
-   //const [data, setData] = useState([]);
+
+
 
   let array = myText.split(",");
   
@@ -27,24 +28,13 @@ const EditTermForm = (props) => {
 
   useEffect(() => {
     loadTerm();
-    
   }, []);
 
-  // useEffect(() => {
-  //   axios
-  //     .get(`https://cyf-glossary-backend.herokuapp.com/all-terms`)
-  //     .then((Result) => setData(Result.data));
-  // }, []);
+
   
   const onSubmit = async () => {
      clearErrors();
-    //e.preventDefault();
-    // if (doesTermExist(newTerm.name)) {
-    //   return setError("name", {
-    //     type: "manual",
-    //     message: "The term you are trying to update is already exists in the database",
-    //   });
-    // }
+   
     
     if (offensiveTermPrevention(newTerm.name)) {
       return setError("name", {
@@ -61,21 +51,22 @@ const EditTermForm = (props) => {
      }
     
     await axios.put(
-
       `https://cyf-glossary-backend.herokuapp.com/all-terms/${props.match.params.id}`,
       newTerm
     );
     window.location = "/";
 
+
     
   } 
 
+
   const loadTerm = () => {
-    const result = axios.get(
-      `https://cyf-glossary-backend.herokuapp.com/all-terms/${props.match.params.id}`)
+    const result = axios
+      .get(
+        `https://cyf-glossary-backend.herokuapp.com/all-terms/${props.match.params.id}`
+      )
       .then((result) => setNewTerm(result.data));
-    
-    
   };
 // const doesTermExist = (nTerm) => {
 //   const filterData = data.filter((term) => {
@@ -120,8 +111,10 @@ const EditTermForm = (props) => {
           name="name"
           defaultValue={newTerm.name}
           onChange={inputChangeHandler}
+
         readOnly/>
         {errors.name && <p>{errors.name.message}</p>}
+
         <label htmlFor="description">Description:</label>
         <textarea
           ref={register({
@@ -136,7 +129,9 @@ const EditTermForm = (props) => {
           defaultValue={newTerm.description}
           onChange={inputChangeHandler}
         />
+
         {errors.description && <p>{errors.description.message}</p>}
+
         <label htmlFor="link">Link1: </label>
         <input
           ref={register({ required: "LINK REQUIRED" })}
@@ -146,7 +141,9 @@ const EditTermForm = (props) => {
           defaultValue={newTerm.link1}
           onChange={inputChangeHandler}
         />
+
         {errors.link && <p>{errors.link.message}</p>}
+
         <label htmlFor="link">Link2: </label>
         <input
           type="url"

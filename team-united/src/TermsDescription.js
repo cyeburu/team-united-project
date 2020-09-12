@@ -7,12 +7,12 @@ const TermsDescription = (props) => {
   console.log(props);
   const [singleData, setSingleData] = useState(null);
 
-  const clickHandler = ()=> {
+  const clickHandler = () => {
     ReactGa.event({
-         category: 'Button',
-         action: 'Edit button was clicked'
-    })
-  }
+      category: "Button",
+      action: "Edit button was clicked",
+    });
+  };
 
   useEffect(() => {
     axios
@@ -45,23 +45,34 @@ const TermsDescription = (props) => {
             <div className="child">
               <div>
                 <h5>
-                  <b>Term: </b>
-                  {singleData.name}
+                  <b>Term:</b>
+                  <b>{singleData.name}</b>
                 </h5>
               </div>
               <hr />
-              <div className="desc-section">
-                <h5>
-                  <b>Description:</b>
+              <div class="card w-100">
+                <h5 className="card-title">
+                  <div className="desc-section">
+                    <b>Description:</b>
+                  </div>
                 </h5>
-                <p>{singleData.description}</p>
+                <div className="desc-section">
+                  <p className="card-text bg-light">{singleData.description}</p>
+                </div>
               </div>
               <div className="link-flex ">
                 <h5>
-                  <b>Additional Information:</b>
+                  <div className="desc-section">
+                    <b className="text-justify">Additional Information:</b>
+                  </div>
                 </h5>
-                <a href={singleData.link1}>{singleData.link1}</a>
-                <a href={singleData.link2}>{singleData.link2}</a>
+
+                <a href={singleData.link1} className="text-success">
+                  {singleData.link1}
+                </a>
+                <a href={singleData.link2} className="text-success">
+                  {singleData.link2}
+                </a>
               </div>
               <div className="btn-section">
                 <Link to={`/EditTermForm/${props.match.params.id}`}>
