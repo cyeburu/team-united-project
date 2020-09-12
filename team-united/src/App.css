@@ -34,7 +34,7 @@ header {
 	text-align: center;
 }
 
-#addTerm {
+.addTerm {
 	right: -1050px;
 	position: relative;
 	top: -11px;
@@ -292,3 +292,121 @@ textarea{
 .divTableBody {
 	display: table-row-group;
 }
+
+
+/* On screens that are 600px wide or less:
+   -change following attributes:
+   .css-grid-table-header
+   .input search
+   .select
+   .addTerm
+   .button
+   .button edit and delete
+ 
+
+@media screen and (max-width: 600px) {
+	header {
+		background: lightblue;
+		height: 3.7em;
+		background-image: url('https://codeyourfuture.io/wp-content/uploads/2019/03/cyf_brand.png');
+		background-position: 10px 2px;
+		background-repeat: no-repeat;
+		background-size: 150px;
+		font-family: Georgia, "Times New Roman", Times, serif;
+	}
+
+	input[type=search] {
+	position: relative;
+	  display: flex;
+	  text-align: left;
+	  width: 180%;
+	  margin-left: -230px;
+	  padding: 14px;
+	}
+
+	select {
+	 
+		display: flex;
+		text-align: left;
+		width: 100%;
+		margin-left: -270px;
+		padding: 14px;
+		top:7.6px;
+	  }
+
+	  .addTerm {
+		right: -410px;
+		position: relative;
+		top: -12px;
+	}
+
+	.btn-section{
+		display: flex;
+		right:140px;
+	
+	}
+
+	.backBtn{
+		right: -350px;
+
+	}
+	
+  }
+*/
+
+/*
+Samsung sm-j600 Galaxy on6 device adapted with styling:
+*/
+  @media only screen and (max-width: 537.6px) {
+
+	header {
+		background: lightblue;
+		height: 3.7em;
+		background-image: url('https://codeyourfuture.io/wp-content/uploads/2019/03/cyf_brand.png');
+		background-position: 10px 2px;
+		background-repeat: no-repeat;
+		background-size: 150px;
+		font-family: Georgia, "Times New Roman", Times, serif;
+	}
+
+	input[type=search] {
+	position: relative;
+	  display: flex;
+	  text-align: left;
+	  width: 180%;
+	  margin-left: -230px;
+	  padding: 14px;
+	}
+
+	select {
+	 
+		display: flex;
+		text-align: left;
+		width: 100%;
+		margin-left: -270px;
+		padding: 14px;
+		top:7.6px;
+	  }
+
+	  .addTerm {
+		right: -410px;
+		position: relative;
+		top: -12px;
+	}
+
+	.btn-section{
+		display: flex;
+		right:140px;
+	
+	}
+
+	.backBtn{
+		right: -350px;
+
+	}
+	
+	
+ }
+
+
+  

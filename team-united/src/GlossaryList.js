@@ -36,7 +36,7 @@ const GlossaryList = (props) => {
       {props.convertedData !== null ? (
         <div>
           <div className="nav">
-            <div id="addTerm">
+            <div className="addTerm">
               <button
                 onClick={clickHandler}
                 className="bg-green-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded ml-4 mt-4"
