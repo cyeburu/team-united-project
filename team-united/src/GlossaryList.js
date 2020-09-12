@@ -22,7 +22,7 @@ const GlossaryList = (props) => {
   const nameResults = search
     ? results.map((item) => item.item)
     : props.convertedData;
-  console.log(nameResults);
+  
 
   const clickHandler = () => {
     ReactGa.event({
