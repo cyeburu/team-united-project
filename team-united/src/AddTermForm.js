@@ -3,6 +3,7 @@ import { Link, withRouter } from "react-router-dom";
 import Axios from "axios";
 import { useForm } from "react-hook-form";
 import { ErrorMessage } from "@hookform/error-message";
+import myText from "./forbidden.js";
 
 const AddTermForm = (props) => {
   const { register, handleSubmit, errors, setError, clearErrors } = useForm();
@@ -14,8 +15,11 @@ const AddTermForm = (props) => {
     link1: "",
     link2: "",
   };
-
+  
   const [newTerm, setNewTerm] = useState(initialFormState);
+   
+  
+  let array = myText.split(",");
 
   const inputChangeHandler = (event) => {
     const { name, value } = event.target;
@@ -31,7 +35,12 @@ const AddTermForm = (props) => {
         message: "Term Already Exists in the database",
       });
     }
-
+    if (offensiveTermPrevention(newTerm.name)) {
+      return setError("name", {
+        type: "manual",
+        message: "Where are your manners type another term",
+      });
+    }
     if (newTerm.name) {
       props.addTerm(newTerm);
       await Axios.post(
@@ -43,18 +52,22 @@ const AddTermForm = (props) => {
       window.location = "/";
     }
   };
+
   const doesTermExist = (nTerm) => {
     const filterData = props.data.filter((term) => {
-      console.log("term.name", term.name);
-      console.log("nTerm", nTerm);
-
-      return (
-        term.name.toLowerCase() === nTerm.toLowerCase()
-        
-      );
+      return term.name.toLowerCase() === nTerm.toLowerCase();
     });
     return filterData.length;
   };
+
+  const offensiveTermPrevention = (nTerm) => {
+    const filterTerms = array.filter((badTerm) => {
+      return badTerm.toLowerCase().includes(nTerm.toLowerCase());
+    });
+
+    return filterTerms.length;
+  };
+
   return (
     <div>
       <div className="backBtn">
@@ -121,7 +134,7 @@ const AddTermForm = (props) => {
           defaultValue={newTerm.link2}
           onChange={inputChangeHandler}
         />
-        {errors.link2 && <p>{errors.link2.message}</p>}
+       
         <button className="bg-red-500 text-white font-bold py-1 px-1 rounded ml-4 mt-4">
           Add New Term
         </button>

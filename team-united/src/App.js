@@ -56,7 +56,7 @@ const App = () => {
               path="/"
               exact
               render={() => (
-                <div>
+                <div >
                   <GlossaryList
                     data={currentPost}
                     convertedData={convertedData}
