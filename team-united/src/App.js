@@ -28,8 +28,7 @@ const App = () => {
     axios
       .get(`https://cyf-glossary-backend.herokuapp.com/all-terms`)
       .then((Result) => setData(Result.data)
-      .catch((error) => console.log(error)
-      ))
+      )
   }, []);
 
   useEffect(() => {
