@@ -257,6 +257,7 @@ body {
 	}
 	input[type="search"] {
 	  position: relative;
+	  text-align: center;
 	  right: -30px;
 	  box-sizing: border-box;
 	  background-image: url("https://www.w3schools.com/css/searchicon.png");
@@ -293,6 +294,13 @@ body {
 	  top: -12px;
 	  right: 20px;
 	}
+	.addTermText{
+		right:100px;
+	}
+	.editTerm{
+		right: 100px;
+	}
+
   }
   @media only screen and (min-width: 414px) and (max-width: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
 	body {
@@ -316,6 +324,7 @@ body {
 	}
 	input[type="search"] {
 	  position: relative;
+	  text-align: center;
 	  right: -30px;
 	  box-sizing: border-box;
 	  background-image: url("https://www.w3schools.com/css/searchicon.png");
@@ -344,6 +353,13 @@ body {
 	  position: fixed;
 	  top: -12px;
 	  right: 150px;
+	}
+
+	.addTermText{
+		right:100px;
+	}
+	.editTerm{
+		right: 100px;
 	}
   }
   @media screen and (max-width: 677px) {
@@ -368,6 +384,7 @@ body {
 	}
 	input[type="search"] {
 	  position: relative;
+	  text-align: center;
 	  right: -30px;
 	  box-sizing: border-box;
 	  background-image: url("https://www.w3schools.com/css/searchicon.png");
@@ -397,6 +414,13 @@ body {
 	  top: -12px;
 	  right: 150px;
 	}
+
+	.addTermText{
+		right:100px;
+	}
+	.editTerm{
+		right: 100px;
+	}
   }
   @media screen and (max-width: 576px) {
 	body {
@@ -420,6 +444,7 @@ body {
 	}
 	input[type="search"] {
 	  position: relative;
+	  text-align: center;
 	  right: -30px;
 	  box-sizing: border-box;
 	  background-image: url("https://www.w3schools.com/css/searchicon.png");
@@ -448,6 +473,13 @@ body {
 	  position: fixed;
 	  top: -12px;
 	  right: 10px;
+	}
+
+	.addTermText{
+		right:100px;
+	}
+	.editTerm{
+		right: 100px;
 	}
   }
   
