@@ -76,7 +76,7 @@ const EditTermForm = (props) => {
           </button>
         </Link>
         <div className="editTerm">
-          <h3 className="text-center  text-muted">Edit A Term</h3>
+          <h3 className="text-center mb-4 text-muted">Edit A Term</h3>
         </div>
       </div>
       <div>
