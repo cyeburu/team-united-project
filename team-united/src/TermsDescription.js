@@ -50,27 +50,27 @@ const TermsDescription = (props) => {
                 </h5>
               </div>
               <hr />
-              <div>
-                <h5 className="card-header">
+              <div className="termsStyle">
+                <h5 className>
                   <div className="desc-section">
                     <b>Description:</b>
                   </div>
                 </h5>
                 <div className="desc-section">
                   
-                  <div className="card bg-light text-dark">
-                  <div className="text-col">
+                
+                  <div>
                   <p><i>{singleData.description}</i></p>
                   </div>
-                  </div>
+                 
                 </div>
               </div>
               <div className="link-flex ">
                 <h5>
                   <b>Additional Information:</b>
                 </h5>
-                <a href={singleData.link1}>{singleData.link1}</a>
-                <a href={singleData.link2}>{singleData.link2}</a>
+                <a className="text-success" href={singleData.link1}>{singleData.link1}</a>
+                <a className="text-success" href={singleData.link2}>{singleData.link2}</a>
               </div>
               <div className="btn-section">
                 <Link to={`/EditTermForm/${props.match.params.id}`}>

@@ -74,11 +74,22 @@ border: 0px solid #000000;
 
  }
  
- .text-col{
-	
-	height: 100%;
-	background-image: repeating-linear-gradient(#eeeeee,#eeeeee 22.3px,black 23.8px);
-  }
+ .termsStyle{
+	position: relative;
+	background-color:#fffafa;
+	border-radius: 5px 0px 0px 5px;
+   -moz-border-radius: 10px 0px 0px 10px;
+   -webkit-border-radius: 10px 0px 0px 10px;
+    border: 0px solid #000000;
+	width: 80%;
+	height: 180%;
+	margin-left: 0%;
+	-webkit-box-shadow:25px 0px 25px -25px rgba(0,0,0,0.21),-25px 0px 25px -25px rgba(0,0,0,0.21);
+	-moz-box-shadow: 25px 0px 25px -25px rgba(0,0,0,0.21),-25px 0px 25px -25px rgba(0,0,0,0.21);
+	box-shadow: 25px 0px 25px -25px rgba(0,0,0,0.21),-25px 0px 25px -25px rgba(0,0,0,0.21);
+
+
+ }
 
   
 
