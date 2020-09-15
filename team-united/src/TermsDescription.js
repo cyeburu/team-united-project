@@ -50,11 +50,20 @@ const TermsDescription = (props) => {
                 </h5>
               </div>
               <hr />
-              <div className="desc-section">
-                <h5>
-                  <b>Description:</b>
+              <div>
+                <h5 className="card-header">
+                  <div className="desc-section">
+                    <b>Description:</b>
+                  </div>
                 </h5>
-                <p>{singleData.description}</p>
+                <div className="desc-section">
+                  
+                  <div className="card bg-light text-dark">
+                  <div className="text-col">
+                  <p><i>{singleData.description}</i></p>
+                  </div>
+                  </div>
+                </div>
               </div>
               <div className="link-flex ">
                 <h5>
