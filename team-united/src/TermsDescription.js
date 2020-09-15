@@ -51,7 +51,7 @@ const TermsDescription = (props) => {
               </div>
               <hr />
               <div>
-                <h5 className="blockquote mb-0">
+                <h5 className="card-header">
                   <div className="desc-section">
                     <b>Description:</b>
                   </div>

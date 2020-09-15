@@ -75,14 +75,12 @@ border: 0px solid #000000;
  }
  
  .text-col{
+	
 	height: 100%;
 	background-image: repeating-linear-gradient(#eeeeee,#eeeeee 22.3px,black 23.8px);
   }
 
-  .card{
-	 bottom: -12px;
-	 background-color: rgb(255, 255, 255);
-  }
+  
 
 
  .editStyleButton{
@@ -191,7 +189,7 @@ border: 0px solid #000000;
   }
   
   .desc-section {
-	margin-bottom: 100px;
+	margin-bottom: 30px;
   }
   
   .btn-section {
