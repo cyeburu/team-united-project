@@ -49,7 +49,7 @@ const EditTermForm = (props) => {
       `https://cyf-glossary-backend.herokuapp.com/all-terms/${props.match.params.id}`,
       newTerm
     );
-    window.location = "/";
+    window.location = `/TermsDescription/${props.match.params.id}`;
   };
 
   const loadTerm = () => {
@@ -68,7 +68,7 @@ const EditTermForm = (props) => {
     return filterTerms.length;
   };
   return (
-    <div>
+    <div className="termsContent">
       <div className="backBtn">
         <Link to={`/`}>
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded ml-4 mt-4">
@@ -76,13 +76,20 @@ const EditTermForm = (props) => {
           </button>
         </Link>
         <div className="editTerm">
+<<<<<<< Updated upstream
           <h3 className="text-center  text-muted">Edit A Term</h3>
+=======
+         
+          <h1 className="title">Edit Term</h1>
+>>>>>>> Stashed changes
         </div>
       </div>
       <div>
         <ErrorMessage errors={errors} name="singleErrorInput" />
       </div>
-      <form onSubmit={handleSubmit(onSubmit)} className="container">
+      <div className="jumbotron">
+       
+      <form className="form-group" onSubmit={handleSubmit(onSubmit)} className="container">
         <label htmlFor="Terms">Term:</label>
         <input
           ref={register({
@@ -131,8 +138,13 @@ const EditTermForm = (props) => {
           defaultValue={newTerm.link2}
           onChange={inputChangeHandler}
         />
+        <div className="editStyleButton">
         <button className="btn btn-warning btn-block">Update Term</button>
+        </div>
+        
       </form>
+      </div>
+   
     </div>
   );
 };

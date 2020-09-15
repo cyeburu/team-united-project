@@ -50,11 +50,28 @@ const TermsDescription = (props) => {
                 </h5>
               </div>
               <hr />
+<<<<<<< Updated upstream
               <div className="desc-section">
                 <h5>
                   <b>Description:</b>
                 </h5>
                 <p>{singleData.description}</p>
+=======
+              <div>
+                <h5 className="blockquote mb-0">
+                  <div className="desc-section">
+                    <b>Description:</b>
+                  </div>
+                </h5>
+                <div className="desc-section">
+                  
+                  <div className="card bg-light text-dark">
+                  <div className="text-col">
+                  <p><i>{singleData.description}</i></p>
+                  </div>
+                  </div>
+                </div>
+>>>>>>> Stashed changes
               </div>
               <div className="link-flex ">
                 <h5>

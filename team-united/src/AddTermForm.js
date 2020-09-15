@@ -68,7 +68,7 @@ const AddTermForm = (props) => {
   };
 
   return (
-    <div>
+    <div className="termsContent">
       <div className="backBtn">
         <Link to={`/`}>
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded ml-4 mt-4">
@@ -76,14 +76,16 @@ const AddTermForm = (props) => {
           </button>
         </Link>
         <div className="addTermText">
-          <h3 className="text-center mb-4 text-muted">New Term</h3>
+        
+          <h1 className="title">New Term</h1>
         </div>
       </div>
       <div>
         <ErrorMessage errors={errors} name="singleErrorInput" />
       </div>
-      <form onSubmit={handleSubmit(onSubmit)} className="container">
-        <label htmlFor="Terms">Add Terminology:</label>
+      <div className="jumbotron">
+      <form  onSubmit={handleSubmit(onSubmit)} className="container">
+         <label htmlFor="Terms">Add Terminology:</label>
         <input
           ref={register({
             required: "ADDTERM REQUIRED",
@@ -117,7 +119,7 @@ const AddTermForm = (props) => {
         {errors.description && <p>{errors.description.message}</p>}
         <label htmlFor="link">Link1: </label>
         <input
-          ref={register({ required: "LINK REQUIRED" })}
+          ref={register({ required: "LINK REQUIRED"})}
           placeholder="Url for further information"
           type="url"
           name="link1"
@@ -133,11 +135,13 @@ const AddTermForm = (props) => {
           defaultValue={newTerm.link2}
           onChange={inputChangeHandler}
         />
-
+       
         <button className="bg-red-500 text-white font-bold py-1 px-1 rounded ml-4 mt-4">
           Add New Term
         </button>
+        
       </form>
+    </div>
     </div>
   );
 };
