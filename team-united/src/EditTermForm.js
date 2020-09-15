@@ -76,12 +76,8 @@ const EditTermForm = (props) => {
           </button>
         </Link>
         <div className="editTerm">
-<<<<<<< Updated upstream
-          <h3 className="text-center  text-muted">Edit A Term</h3>
-=======
          
           <h1 className="title">Edit Term</h1>
->>>>>>> Stashed changes
         </div>
       </div>
       <div>
