@@ -8,7 +8,8 @@ import ReactGa from "react-ga";
 const GlossaryList = (props) => {
   const [search, setSearch] = useState("");
   const [categoriseFilter, setCategoriseFilter] = useState("");
-
+  
+  const [admin,setAdmin] =useState(false);
   const fuse = new Fuse(props.allData, {
     keys: ["name"],
     includeScore: true,
@@ -30,6 +31,13 @@ const GlossaryList = (props) => {
       action: "Add button was clicked",
     });
   };
+    const adminClickHandler=()=>{
+       if(admin){
+         setAdmin(false);
+       }else{
+         setAdmin(true);
+       }
+    }
 
   return (
     <div>
@@ -47,6 +55,13 @@ const GlossaryList = (props) => {
                 >
                   Add Term
                 </Link>
+                 </button>
+                  <button
+                onClick={()=>adminClickHandler()}
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded ml-4 mt-4"
+              > { admin ? "Log out " : "Login as " }
+                  Admin
+               
               </button>
             </div>
             <SearchTerm
@@ -83,6 +98,7 @@ const GlossaryList = (props) => {
                           <Link
                             to={{
                               pathname: `/TermsDescription/${terms._id}`,
+                              state:{ admin }
                             }}
                           >
                             {terms.name}
@@ -107,6 +123,8 @@ const GlossaryList = (props) => {
                           <Link
                             to={{
                               pathname: `/TermsDescription/${terms._id}`,
+                              state: { admin },
+                              
                             }}
                           >
                             {terms.name}
