@@ -68,7 +68,7 @@ const EditTermForm = (props) => {
     return filterTerms.length;
   };
   return (
-    <div>
+    <div className="border">
       <div className="backBtn">
         <Link to={`/`}>
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded ml-4 mt-4">
@@ -132,7 +132,9 @@ const EditTermForm = (props) => {
           defaultValue={newTerm.link2}
           onChange={inputChangeHandler}
         />
+        <div className="updateBtn">
         <button className="btn btn-warning btn-block">Update Term</button>
+        </div>
       </form>
       </div>
     </div>

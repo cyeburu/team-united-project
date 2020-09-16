@@ -67,8 +67,8 @@ const TermsDescription = (props) => {
                 <h5>
                  <u>Additional Information:</u>
                 </h5>
-                <b><a className="text-success" href={singleData.link1}>{singleData.link1}</a></b>
-              <b><a className="text-success" href={singleData.link2}>{singleData.link2}</a></b>
+                <b><a className="text-primary" href={singleData.link1}>{singleData.link1}</a></b>
+              <b><a className="text-primary" href={singleData.link2}>{singleData.link2}</a></b>
               </div>
 
 
