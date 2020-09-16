@@ -76,12 +76,13 @@ const EditTermForm = (props) => {
           </button>
         </Link>
         <div className="editTerm">
-          <h3 className="text-center  text-muted">Edit A Term</h3>
+        <h1 className="title">Edit Term</h1>
         </div>
       </div>
       <div>
         <ErrorMessage errors={errors} name="singleErrorInput" />
       </div>
+      <div className="jumbotron">
       <form onSubmit={handleSubmit(onSubmit)} className="container">
         <label htmlFor="Terms">Term:</label>
         <input
@@ -133,6 +134,7 @@ const EditTermForm = (props) => {
         />
         <button className="btn btn-warning btn-block">Update Term</button>
       </form>
+      </div>
     </div>
   );
 };
