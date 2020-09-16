@@ -201,9 +201,13 @@ body {
   }
   
   .desc-section {
-	margin-bottom: 30px;
+	padding:10px;
+	position: relative !important;
+    bottom: 35px;
+	
+	
   }
-  
+
   .btn-section {
 	position: absolute !important;
 	top: -12px;
