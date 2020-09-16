@@ -47,7 +47,7 @@ const GlossaryList = (props) => {
             <div className="addTerm">
               <button
                 onClick={clickHandler}
-                className="bg-green-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded ml-4 mt-4"
+                className="bg-green-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded ml-4 mt-4"
               >
                 <Link
                   to={`/AddTermForm/`}
@@ -56,13 +56,17 @@ const GlossaryList = (props) => {
                   Add Term
                 </Link>
                  </button>
+                   <div className='adminBtn'>
+
                   <button
                 onClick={()=>adminClickHandler()}
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded ml-4 mt-4"
-              > { admin ? "Log out " : "Login as " }
+                className="bg-blue-500 hover:bg-orange-700 text-white font-bold py-1 px-2 rounded ml-4 mt-4"
+              > { admin ? "Logout " : "Login " }
                   Admin
                
               </button>
+
+                   </div>
             </div>
             <SearchTerm
               search={search}
