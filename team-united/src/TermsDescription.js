@@ -50,7 +50,7 @@ const TermsDescription = (props) => {
                 </h5>
               </div>
               <hr />
-              <div className="termsStyle">
+              <div className="jumbotron jumbotron-fluid">
                 <h5 className>
                   <div className="desc-section">
                     <b>Description:</b>
