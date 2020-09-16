@@ -14,7 +14,7 @@ body {
   .btn-flex {
 	display: flex;
   }
-  header {
+   header {
 	background: lightblue;
 	height: 3.7em;
 	background-image: url("https://codeyourfuture.io/wp-content/uploads/2019/03/cyf_brand.png");
@@ -40,7 +40,7 @@ body {
 	position: relative;
 	width: 100%;
 	top: -12px;
-	right: -300px;
+	right: -75%;
   }
   
   .editTerm {
