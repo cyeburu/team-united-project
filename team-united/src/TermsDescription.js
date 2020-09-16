@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import axios from "axios";
 import ReactGa from "react-ga";
 
 const TermsDescription = (props) => {
-  console.log(props);
   const [singleData, setSingleData] = useState(null);
-
+  let location = useLocation();
+  console.log(location.state.admin);
+ 
   const clickHandler = () => {
     ReactGa.event({
       category: "Button",
@@ -64,28 +65,31 @@ const TermsDescription = (props) => {
                 <a href={singleData.link2}>{singleData.link2}</a>
               </div>
               <div className="btn-section">
-                <Link to={`/EditTermForm/${props.match.params.id}`}>
-                  <button
-                    onClick={clickHandler}
-                    className="bg-green-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded ml-4 mt-4"
-                  >
-                    Edit
-                  </button>
-                </Link>
-
-                <button
-                  onClick={(e) => {
-                    if (
-                      window.confirm(
-                        "Are you sure you wish to delete this term?"
-                      )
-                    )
-                      deleteTerm(props.match.params.id);
-                  }}
-                  className="bg-red-500 hover:bg-blue-700 text-white font-bold py-1 px-1 rounded ml-4 mt-4"
-                >
-                  Delete
-                </button>
+                <div>
+                  {location.state.admin && (
+                    <Link to={`/EditTermForm/${props.match.params.id}`}>
+                      <button
+                        onClick={clickHandler}
+                        className="bg-green-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded ml-4 mt-4"
+                      >
+                        Edit
+                      </button>
+                      <button
+                        onClick={(e) => {
+                          if (
+                            window.confirm(
+                              "Are you sure you wish to delete this term?"
+                            )
+                          )
+                            deleteTerm(props.match.params.id);
+                        }}
+                        className="bg-red-500 hover:bg-blue-700 text-white font-bold py-1 px-1 rounded ml-4 mt-4"
+                      >
+                        Delete
+                      </button>
+                    </Link>
+                  )}
+                </div>
               </div>
             </div>
           </div>

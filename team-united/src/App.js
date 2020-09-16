@@ -11,6 +11,7 @@ import "./App.css";
 import EditTermForm from "./EditTermForm";
 import ReactGa from "react-ga";
 
+
 //tidy up done
 const App = () => {
   const [newTerm, setNewTerm] = useState(TermsData);
@@ -52,7 +53,7 @@ const App = () => {
               path="/"
               exact
               render={() => (
-                <div >
+                <div>
                   <GlossaryList
                     data={currentPost}
                     convertedData={convertedData}
@@ -68,6 +69,8 @@ const App = () => {
                 </div>
               )}
             />
+            
+            
 
             <Route path="/TermsDescription/:id/" component={TermsDescription} />
             <Route

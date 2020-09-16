@@ -31,7 +31,7 @@ body {
   }
   
   .addTerm {
-	right: -1050px;
+	right: -1000px;
 	position: relative;
 	top: -11px;
   }
@@ -119,15 +119,16 @@ body {
   }
   
   select {
-	position: relative;
-	right: -420px;
+	position: relative !important;
+	
+	right: -400px;
 	font-size: 19px;
-	top: 10px;
+	top: 8px;
   }
   
   input[type="search"] {
-	position: relative;
-	right: -290px;
+	position: relative !important;
+	right: -310px;
 	box-sizing: border-box;
 	background-image: url("https://www.w3schools.com/css/searchicon.png");
 	background-position: 10px 10px;
@@ -234,6 +235,13 @@ body {
   }
   .divTableBody {
 	display: table-row-group;
+
+  }
+  .adminBtn{
+	  position: fixed;
+	  display: inline-block;
+	  
+	
   }
   @media screen and (max-width: 812px) {
 	body {
