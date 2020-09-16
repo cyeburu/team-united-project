@@ -274,8 +274,8 @@ body {
   .adminBtn{
 	  position: absolute;;
 	  display: inline-block;
-	  top:0px;
-	  left:110px;
+	  top:-12px;
+	  left:1110px;
 	  white-space: nowrap;
 	  text-align: center;
 	
@@ -288,6 +288,7 @@ body {
  and (-webkit-min-device-pixel-ratio: 1) { 
 
    body {
+	 margin:0;
 	 max-width: 812px;
 	 overflow-x: hidden !important;
 
@@ -301,7 +302,7 @@ body {
 	 /* background-position: 40px 4px; */
 	 background-repeat: no-repeat;
 	 background-size: 150px;
-	 max-width: 375px;
+	
 	 
 	
 	
@@ -338,8 +339,8 @@ body {
 	 font-size: 20px;
    }
    .addTerm {
-	position: relative;
 	top: -10px;
+	position: relative;
     left: 105px;
    }
  
@@ -366,6 +367,7 @@ body {
 	left: -140px;
    }
    .editTerm{
+	   
 	   left: -140px;
    }
 
