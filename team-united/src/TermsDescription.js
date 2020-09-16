@@ -6,7 +6,7 @@ import ReactGa from "react-ga";
 const TermsDescription = (props) => {
   const [singleData, setSingleData] = useState(null);
   let location = useLocation();
-  console.log(location.state.admin);
+  //console.log(location.state.admin);
  
   const clickHandler = () => {
     ReactGa.event({
