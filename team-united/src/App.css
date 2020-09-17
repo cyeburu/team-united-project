@@ -1,113 +1,100 @@
 body {
 	overflow-x: hidden;
-  }
-  
-  .App {
+	}
+	.App {
 	text-align: center;
-  }
-  
-  .App-logo {
+	}
+	.App-logo {
 	height: 40vmin;
 	pointer-events: none;
-  }
-  
-  .btn-flex {
+	}
+	.btn-flex {
 	display: flex;
-  }
-  header {
+	}
+	header {
 	background: lightblue;
 	height: 3.7em;
 	background-image: url("https://codeyourfuture.io/wp-content/uploads/2019/03/cyf_brand.png");
 	background-position: 140px 4px;
 	background-repeat: no-repeat;
 	background-size: 150px;
-  }
-  
-  .nav {
+	}
+	.nav {
 	display: flex;
 	font-family: Georgia, "Times New Roman", Times, serif;
 	border-radius: 4%;
 	text-align: center;
-  }
-  
-  .addTerm {
+	}
+	.addTerm {
 	right: -1000px;
 	position: relative;
 	top: -11px;
-  }
-  
-  .backBtn {
+	}
+	.backBtn {
 	position: relative;
 	width: 100%;
 	top: -12px;
 	right: -300px;
-  }
-  
-  .editTerm {
+	}
+	.editTerm {
 	position: relative;
 	width: 100%;
 	top: 10px;
 	padding: 10px;
 	right: 300px;
-  }
-  .addTermText {
+	}
+	.addTermText {
 	position: relative;
 	width: 100%;
 	top: 10px;
 	padding: 10px;
 	right: 300px;
-  }
-  
-  .title {
+	}
+	.title {
 	color: white;
 	text-align: center;
 	padding: 20px;
-  }
-  ul.list-group.list-group-striped li:nth-of-type(odd) {
+	}
+	ul.list-group.list-group-striped li:nth-of-type(odd) {
 	background: rgb(220, 216, 216);
 	padding: 20px;
-  }
-  ul.list-group.list-group-striped li:nth-of-type(even) {
+	}
+	ul.list-group.list-group-striped li:nth-of-type(even) {
 	background: white;
 	padding: 20px;
-  }
-  .css-grid-table,
-  .css-grid-table-header,
-  .css-grid-table-body {
+	}
+	.css-grid-table,
+	.css-grid-table-header,
+	.css-grid-table-body {
 	display: grid;
-  }
-  
-  .css-grid-table {
+	}
+	.css-grid-table {
 	grid-template-rows: 24px 72px;
 	width: 80%;
-  }
-  
-  .css-grid-table-header,
-  .css-grid-table-body {
+	}
+	.css-grid-table-header,
+	.css-grid-table-body {
 	grid-template-columns: auto auto auto minmax(150px, 25%);
 	line-height: 44px;
-  }
-  
-  .css-grid-table-header {
+	}
+	.css-grid-table-header {
 	grid-column-gap: 2px;
 	grid-template-rows: auto;
-  }
-  
-  .css-grid-table-body {
+	}
+	.css-grid-table-body {
 	grid-template-rows: auto auto auto;
-  }
-  
-  .css-grid-table-header div {
+	}
+	.css-grid-table-header div {
 	text-align: center;
 	font-weight: bold;
 	background-color: rgb(191, 191, 191);
-  }
-  .container {
+	}
+	.container {
 	display: flex;
 	flex-direction: column;
 	padding: 40px;
-  }
-  input {
+	}
+	input {
 	position: relative;
 	width: 100%;
 	padding: 12px 20px;
@@ -116,17 +103,14 @@ body {
 	border: 2px solid black;
 	border-radius: 4px;
 	font-size: 10px;
-  }
-  
-  select {
+	}
+	select {
 	position: relative !important;
-	
 	right: -400px;
 	font-size: 19px;
 	top: 8px;
-  }
-  
-  input[type="search"] {
+	}
+	input[type="search"] {
 	position: relative !important;
 	right: -310px;
 	box-sizing: border-box;
@@ -134,9 +118,8 @@ body {
 	background-position: 10px 10px;
 	background-repeat: no-repeat;
 	width: 120%;
-  }
-  
-  textarea {
+	}
+	textarea {
 	width: 100%;
 	height: 120px;
 	padding: 12px 20px;
@@ -145,40 +128,67 @@ body {
 	border: 2px solid black;
 	border-radius: 4px;
 	font-size: 10px;
-  }
-  .flex {
+	}
+	.flex {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-  }
-  .backrd-clr {
+	}
+	.backrd-clr {
 	background-color: rgb(0, 134, 250);
 	color: white;
-  }
-  .backrd-clr2 {
+	}
+	.backrd-clr2 {
 	background-color: white;
 	color: rgb(0, 134, 250);
-  }
-  
-  .desc-section {
+	}
+	.desc-section {
 	margin-bottom: 100px;
-  }
-  
-  .btn-section {
+	}
+	.jumbotron {
+	position: relative;
+	background-color:rgb(220, 216, 216);
+	border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	border: 0px solid #000000;
+	width: 80%;
+	height: 80%;
+	margin-left: 10%;
+	-webkit-box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.21);
+	-moz-box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.21);
+	box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.21);
+	}
+	.jumbotron-fluid{
+	position: relative!important;
+	background-color:snow;
+	border-radius: 15px 15px 15px 15px;
+	-moz-border-radius: 15px 15px 15px 15px;
+	-webkit-border-radius: 15px 15px 15px 15px;
+	width: 100%;
+	height: 80%;
+	margin-left: 0%;
+	-webkit-box-shadow: 25px 0px 25px -25px rgba(0,0,0,0.21), -25px 0px 25px -25px rgba(0,0,0,0.21);
+	-moz-box-shadow: 25px 0px 25px -25px rgba(0,0,0,0.21), -25px 0px 25px -25px rgba(0,0,0,0.21);
+	box-shadow: 25px 0px 25px -25px rgba(0,0,0,0.21), -25px 0px 25px -25px rgba(0,0,0,0.21);
+	}
+	.child{
+	padding:10px;
+	}
+	.btn-section {
 	position: fixed;
 	top: -12px;
 	right: 100px;
-  }
-  .link-flex {
+	}
+	.link-flex {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-  }
-  .btn {
+	}
+	.btn {
 	height: 38px;
-  }
-  
-  .App-header {
+	}
+	.App-header {
 	background-color: #282c34;
 	min-height: 100vh;
 	display: flex;
@@ -186,286 +196,1220 @@ body {
 	align-items: center;
 	justify-content: center;
 	font-size: calc(10px + 2vmin);
-  }
-  
-  .App-link {
+	}
+	.App-link {
 	color: #61dafb;
-  }
-  
-  @keyframes App-logo-spin {
+	}
+	@keyframes App-logo-spin {
 	from {
-	  transform: rotate(0deg);
+	transform: rotate(0deg);
 	}
 	to {
-	  transform: rotate(360deg);
+	transform: rotate(360deg);
 	}
-  }
-  
-  .title {
+	}
+	.title {
 	color: black;
 	font-family: Georgia, "Times New Roman", Times, serif;
-  }
-  
-  .divTable {
+	}
+	.divTable {
 	display: table;
 	width: 100%;
-  }
-  .divTableRow {
+	}
+	.divTableRow {
 	display: table-row;
-  }
-  .divTableHeading {
+	}
+	.divTableHeading {
 	background-color: #eee;
 	display: table-header-group;
-  }
-  .divTableCell,
-  .divTableHead {
+	}
+	.divTableCell,
+	.divTableHead {
 	border: 1px solid #999999;
 	display: table-cell;
 	padding: 3px 10px;
-  }
-  .divTableHeading {
+	}
+	.divTableHeading {
 	background-color: #eee;
 	display: table-header-group;
 	font-weight: bold;
-  }
-  .divTableFoot {
+	}
+	.divTableFoot {
 	background-color: #eee;
 	display: table-footer-group;
 	font-weight: bold;
-  }
-  .divTableBody {
+	}
+	.divTableBody {
 	display: table-row-group;
-
-  }
-  .adminBtn{
-	  position: absolute;;
-	  display: inline-block;
-	  top:0px;
-	  left:110px;
-	  white-space: nowrap;
-	  text-align: center;
+	
+	}
+	.adminBtn{
+	position: absolute;;
+	display: inline-block;
+	top:-11px;
+	left:1100px;
+	white-space: nowrap;
+	text-align: center;
+	}
+	
+	.border{
+	width: 100%;
+	box-sizing: border-box;
+	}
+	
+	.updateBtn{
+	padding:10px;
+	}
 	
 	
-	  
+	/*iPhone X portrait*/
+	@media only screen 
+	and (min-device-width: 375px) 
+	and (max-device-width: 812px) 
+	and (-webkit-min-device-pixel-ratio: 3)
+	and (orientation: portrait)
+	{ 
 	
-
-	
-	  
-	
-  }
-  @media screen and (max-width: 812px) {
 	body {
-	  max-width: 812px;
-	  overflow-x: hidden !important;
+	margin:0;
+	max-width: 812px;
+	overflow-x: hidden !important;
+	box-sizing: border-box;
+	
+	}
+	
+	.border{
+	max-width:812px;
+	box-sizing: border-box;
+	overflow-x: hidden !important;
 	}
 	header {
-	  background: lightblue;
-	  height: 3.7em;
-	  background-image: url("https://codeyourfuture.io/wp-content/uploads/2019/03/cyf_brand.png");
-	  /* background-position: 40px 4px; */
-	  background-repeat: no-repeat;
-	  background-size: 150px;
-	  max-width: 812px;
+	width: 100%;
+	background: lightblue;
+	height: 3.7em;
+	background-image: url("https://codeyourfuture.io/wp-content/uploads/2019/03/cyf_brand.png");
+	background-repeat: no-repeat;
+	background-size: 150px;
+	max-width: 812px;
 	}
 	.nav {
-	  display: flex;
-	  font-family: Georgia, "Times New Roman", Times, serif;
-	  border-radius: 4%;
-	  text-align: center;
+	display: flex;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	border-radius: 4%;
+	text-align: center;
 	}
+	
 	input[type="search"] {
-	  position: relative;
-	  right: -30px;
-	  box-sizing: border-box;
-	  background-image: url("https://www.w3schools.com/css/searchicon.png");
-	  /* background-position: 10px 10px; */
-	  background-repeat: no-repeat;
-	  max-width: 100%;
+	position: relative;
+	right: -30px;
+	box-sizing: border-box;
+	background-image: url("https://www.w3schools.com/css/searchicon.png");
+	background-repeat: no-repeat;
+	max-width: 74%;
 	}
+	
 	select {
-	  position: relative;
-	  right: -100px;
-	  font-size: 20px;
+	position: relative;
+	right: -20px;
+	top:8px;
+	font-size: 20px;
 	}
 	.addTerm {
-	  top: -11px;
-	  position: relative;
-	  right: -200px;
+	position: absolute;
+	top: -11px;
+	right: 215px;
 	}
-  
+ 
 	.desPage {
-	  width: 100%;
+	width: 100%;
 	}
 	.termsContent {
-	  overflow-x: hidden !important;
+	overflow-x: hidden !important;
 	}
 	.backBtn {
-	  position: relative;
-	  width: 100%;
-	  top: -12px;
-	  right: -140px;
+	position: relative;
+	width: 100%;
+	top: -12px;
+	left: 140px;
 	}
-  
 	.btn-section {
-	  position: fixed;
-	  top: -12px;
-	  right: 20px;
+	position: absolute !important;
+	top: -10px;
+	right: 80px;
 	}
-  }
-  @media only screen and (min-width: 414px) and (max-width: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+	
+	.addTermText{
+	left: -140px;
+	}
+	
+	.editTerm{
+	left: -140px;
+	}
+	
+	
+	}
+	
+	/* iPhoneX Landscape */
+	@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+	
 	body {
-	  max-width: 736px;
-	  overflow-x: hidden !important;
+	margin:0;
+	max-width: 812px;
+	overflow-x: hidden !important;
+	box-sizing: border-box;
+	
+	}
+	
+	.border{
+	max-width:812px;
+	box-sizing: border-box;
+	overflow-x: hidden !important;
+	overflow-y: scroll;
 	}
 	header {
-	  background: lightblue;
-	  height: 3.7em;
-	  background-image: url("https://codeyourfuture.io/wp-content/uploads/2019/03/cyf_brand.png");
-	  /* background-position: 40px 4px; */
-	  background-repeat: no-repeat;
-	  background-size: 150px;
-	  max-width: 736px;
+	width: 100%;
+	background: lightblue;
+	height: 3.7em;
+	background-image: url("https://codeyourfuture.io/wp-content/uploads/2019/03/cyf_brand.png");
+	background-repeat: no-repeat;
+	background-size: 150px;
 	}
 	.nav {
-	  display: flex;
-	  font-family: Georgia, "Times New Roman", Times, serif;
-	  border-radius: 4%;
-	  text-align: center;
+	display: flex;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	border-radius: 4%;
+	text-align: center;
 	}
 	input[type="search"] {
-	  position: relative;
-	  right: -30px;
-	  box-sizing: border-box;
-	  background-image: url("https://www.w3schools.com/css/searchicon.png");
-	  /* background-position: 10px 10px; */
-	  background-repeat: no-repeat;
-	  max-width: 100%;
+	left: -130px;
+	box-sizing: border-box;
+	background-image: url("https://www.w3schools.com/css/searchicon.png");
+	background-repeat: no-repeat;
+	max-width: 100%;
+	}
+	.adminBtn{
+	position: absolute;
+	top:110px;
 	}
 	select {
-	  position: relative;
-	  right: -100px;
-	  font-size: 20px;
+	position: relative;
+	left:-150px;
+	top:8px;
+	font-size: 20px;
 	}
 	.addTerm {
-	  top: -11px;
-	  position: relative;
-	  right: -200px;
+	top: -11px;
+	position: relative;
+	left: 540px;
+	}
+	.desPage {
+	width: 100%;
+	}
+	.termsContent {
+	overflow-x: hidden !important;
 	}
 	.backBtn {
-	  position: relative;
-	  width: 100%;
-	  top: -12px;
-	  right: -140px;
+	position: relative;
+	width: 100%;
+	top: -5px;
+	left: 500px;
 	}
-  
 	.btn-section {
-	  position: fixed;
-	  top: -12px;
-	  right: 150px;
+	position: absolute !important;
+	top: -10px;
+	right: 80px;
 	}
-  }
-  @media screen and (max-width: 677px) {
+	.addTermText{
+	left: -500px;
+	}
+	.editTerm{
+	left: -140px;
+	}
+	
+	}
+	/*iPhone 6/7/8 plus portrait */
+	@media only screen 
+	and (min-device-width: 414px) 
+	and (max-device-width: 736px) 
+	and (-webkit-min-device-pixel-ratio: 3)
+	and (orientation: portrait)
+	{
 	body {
-	  max-width: 677px;
-	  overflow-x: hidden !important;
+	margin:0;
+	max-width: 736px;
+	box-sizing: border-box;
+	overflow-x: hidden !important;
+	}
+	.border{
+	max-width:736px;
+	box-sizing: border-box;
+	overflow-x: hidden !important;
 	}
 	header {
-	  background: lightblue;
-	  height: 3.7em;
-	  background-image: url("https://codeyourfuture.io/wp-content/uploads/2019/03/cyf_brand.png");
-	  /* background-position: 40px 4px; */
-	  background-repeat: no-repeat;
-	  background-size: 150px;
-	  max-width: 677px;
+	background: lightblue;
+	height: 3.7em;
+	background-image: url("https://codeyourfuture.io/wp-content/uploads/2019/03/cyf_brand.png");
+	background-repeat: no-repeat;
+	background-size: 140px;
+	max-width: 736px;
 	}
 	.nav {
-	  display: flex;
-	  font-family: Georgia, "Times New Roman", Times, serif;
-	  border-radius: 4%;
-	  text-align: center;
+	display: flex;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	border-radius: 4%;
+	text-align: center;
 	}
 	input[type="search"] {
-	  position: relative;
-	  right: -30px;
-	  box-sizing: border-box;
-	  background-image: url("https://www.w3schools.com/css/searchicon.png");
-	  /* background-position: 10px 10px; */
-	  background-repeat: no-repeat;
-	  max-width: 100%;
+	position: relative;
+	text-align: center;
+	left: 45px;
+	box-sizing: border-box;
+	background-image: url("https://www.w3schools.com/css/searchicon.png");
+	background-repeat: no-repeat;
+	max-width: 70%;
+	border-bottom: 1px solid;
 	}
 	select {
-	  position: relative;
-	  right: -100px;
-	  font-size: 20px;
+	position: relative;
+	left: 143px;
+	font-size: 20px;
 	}
 	.addTerm {
-	  top: -11px;
-	  position: relative;
-	  right: -200px;
+	top: -10px;
+	position: relative;
+	left: 130px;
+	}
+	.adminBtn{
+	left:125px;
+	top: -10px;
+	position: relative;
 	}
 	.backBtn {
-	  position: relative;
-	  width: 100%;
-	  top: -12px;
-	  right: -140px;
+	position: relative;
+	width: 100%;
+	top: -12px;
+	left: 180px;
 	}
-  
 	.btn-section {
-	  position: fixed;
-	  top: -12px;
-	  right: 150px;
+	position: absolute !important;
+	top: -10px;
+	right: 80px;
 	}
-  }
-  @media screen and (max-width: 576px) {
+	.desPage {
+	width: 100%;
+	}
+	.termsContent {
+	overflow-x: hidden !important;
+	}
+	
+	.addTermText{
+	left: -175px;
+	}
+	.editTerm{
+	left: -175px;
+	}
+	
+	}
+	
+	/*iPhone 6/7/8 plus landscape */
+	@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)
+	{
 	body {
-	  max-width: 576px;
-	  overflow-x: hidden !important;
+	
+	max-width: 736px;
+	overflow-x: hidden !important;
+	
+	}
+	.border{
+	max-width:736px;
+	overflow-x: hidden !important;
+	
 	}
 	header {
-	  background: lightblue;
-	  height: 3.7em;
-	  background-image: url("https://codeyourfuture.io/wp-content/uploads/2019/03/cyf_brand.png");
-	  /* background-position: 40px 4px; */
-	  background-repeat: no-repeat;
-	  background-size: 120px;
-	  max-width: 576px;
+	background: lightblue;
+	height: 3.7em;
+	background-image: url("https://codeyourfuture.io/wp-content/uploads/2019/03/cyf_brand.png");
+	background-repeat: no-repeat;
+	background-size: 150px;
+	max-width:736px;
+	
 	}
 	.nav {
-	  display: flex;
-	  font-family: Georgia, "Times New Roman", Times, serif;
-	  border-radius: 4%;
-	  text-align: center;
+	display: flex;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	border-radius: 4%;
+	text-align: center;
+	max-width:736px;
+	 
 	}
+	
+	input {
+	position: relative;
+	box-sizing:border-box;
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	border: 2px solid black;
+	border-radius: 4px;
+	font-size: 10px;
+	}
+	
 	input[type="search"] {
-	  position: relative;
-	  right: -30px;
-	  box-sizing: border-box;
-	  background-image: url("https://www.w3schools.com/css/searchicon.png");
-	  /* background-position: 10px 10px; */
-	  background-repeat: no-repeat;
-	  max-width: 100%;
+	position: relative;
+	left: -35px;
+	bottom:-100px;
+	background-image: url("https://www.w3schools.com/css/searchicon.png");
+	background-repeat: no-repeat;
+	max-width: 100%;
+	border-bottom:1px solid;
+	box-sizing: border-box;
 	}
-	select {
-	  position: relative;
-	  right: -100px;
-	  font-size: 20px;
+
+	.search{
+		position: relative;
+		left:100px;
+		top:28px;
 	}
-	.addTerm {
-	  top: -11px;
-	  position: relative;
-	  right: -175px;
+	.cyfTitle{
+	margin-top:50px;
+	}
+	
+
+	.select{
+	position: relative;
+	left:-170px;
+	top:8px;
+	box-sizing: border-box;
+	}
+
+	.termAdd{
+		position: relative;
+		left:-160px;
+	}
+	.adminLogin{
+		position: relative;
+		left:-160px;
+		margin: 0px;
+		padding: 0px;
+	}
+
+	
+	.desPage {
+	width: 100%;
+	}
+	.termsContent {
+	overflow-x: hidden !important;
 	}
 	.backBtn {
-	  position: relative;
-	  width: 100%;
-	  top: -12px;
-	  right: -100px;
+	top: -10px;
+	left:120px;
 	}
-  
+	.Btnback {
+		top: -10px;
+		left:10px;
+		}
 	.btn-section {
-	  position: absolute;
-	  top: -12px;
-	  right: 10px;
+	position: absolute !important;
+	top: -10px;
+	right: 80px;
 	}
-  }
-  
+	.addTermText{
+	left: -330px;
+	}
+	.editTerm{
+	left: -330px;
+	}
+	
+	}
+	/* iPhone 6/7/8 portrait */
+	@media only screen 
+	and (min-device-width: 375px) 
+	and (max-device-width: 667px) 
+	and (-webkit-min-device-pixel-ratio: 2)
+	and (orientation: portrait) 
+	
+	{
+	
+	body {
+	margin:0;
+	max-width: 736px;
+	box-sizing: border-box;
+	overflow-x: hidden !important;
+	}
+	.border{
+	max-width:736px;
+	box-sizing: border-box;
+	overflow-x: hidden !important;
+	}
+	header {
+	background: lightblue;
+	height: 3.7em;
+	background-image: url("https://codeyourfuture.io/wp-content/uploads/2019/03/cyf_brand.png");
+	background-repeat: no-repeat;
+	background-size: 140px;
+	max-width: 736px;
+	}
+	.nav {
+	display: flex;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	border-radius: 4%;
+	text-align: center;
+	}
+	input[type="search"] {
+	position: relative;
+	text-align: center;
+	left: 29px;
+	box-sizing: border-box;
+	background-image: url("https://www.w3schools.com/css/searchicon.png");
+	background-repeat: no-repeat;
+	max-width: 70%;
+	border-bottom: 1px solid;
+	}
+	select {
+	position: relative;
+	left: 130px;
+	font-size: 20px;
+	}
+	.addTerm {
+	top: -60px;
+	position: relative;
+	left: 110px;
+	}
+	.adminBtn{
+	left:210px;
+	top: -10px;
+	}
+	.backBtn {
+	position: relative;
+	width: 100%;
+	top: -12px;
+	left: 150px;
+	}
+	.btn-section {
+	position: absolute !important;
+	top: -10px;
+	right: 80px;
+	}
+	.desPage {
+	width: 100%;
+	}
+	.termsContent {
+	overflow-x: hidden !important;
+	}
+	
+	.addTermText{
+	left:-150px;
+	}
+	.editTerm{
+	left: -150px;
+	}
+	}
+	
+	/* iPhone 6/7/8 landscape */
+	@media only screen 
+	and (min-device-width: 375px) 
+	and (max-device-width: 667px) 
+	and (-webkit-min-device-pixel-ratio: 2)
+	and (orientation: landscape)
+	
+	{
+	
+	body {
+	margin:0;
+	max-width: 736px;
+	overflow-x: hidden !important;
+	box-sizing: border-box;
+	}
+	.border{
+	max-width:736px;
+	overflow-x: hidden !important;
+	box-sizing: border-box;
+	}
+	header {
+	background: lightblue;
+	height: 3.7em;
+	min-width: 200px;
+	background-image: url("https://codeyourfuture.io/wp-content/uploads/2019/03/cyf_brand.png");
+	background-repeat: no-repeat;
+	background-size: 150px;
+	}
+	.nav {
+	display: flex;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	border-radius: 4%;
+	text-align: center;
+	}
+	
+	input {
+	position: relative;
+	box-sizing:border-box;
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	border: 2px solid black;
+	border-radius: 4px;
+	font-size: 10px;
+	}
+	
+	input[type="search"] {
+	position: relative;
+	right:35px;
+	top:60px;
+	background-image: url("https://www.w3schools.com/css/searchicon.png");
+	background-repeat: no-repeat;
+	width: 100%;
+	border-bottom:1px solid;
+	box-sizing: border-box;
+	}
+	.cyfTitle{
+	margin-top:100px;
+	}
+	.adminBtn{
+	position: relative;
+	left:350px;
+	top:-9px;
+	box-sizing: border-box;
+	}
+	select {
+	position: relative;
+	width:150px;
+	right:-290px;
+	top:68px;
+	font-size: 20px;
+	box-sizing: border-box;
+	}
+	.addTerm {
+	top: -9px;
+	box-sizing: border-box;
+	position: relative;
+	left: 350px;
+	}
+	.desPage {
+	width: 100%;
+	}
+	.termsContent {
+	overflow-x: hidden !important;
+	}
+	.backBtn {
+	top: -10px;
+	left:350px;
+	}
+	.btn-section {
+	position: absolute !important;
+	top: -10px;
+	right: 80px;
+	}
+	.addTermText{
+	left: -330px;
+	}
+	.editTerm{
+	left: -330px;
+	}
+	}
+	
+	/* iPhone 5/SE Portrait */
+	@media only screen 
+	and (min-device-width: 320px) 
+	and (max-device-width: 568px)
+	and (-webkit-min-device-pixel-ratio: 2)
+	and (orientation: portrait) {
+	
+	body {
+	margin:0;
+	max-width: 736px;
+	box-sizing: border-box;
+	overflow-x: hidden !important;
+	}
+	.border{
+	max-width:736px;
+	box-sizing: border-box;
+	overflow-x: hidden !important;
+	}
+	header {
+	background: lightblue;
+	height: 3.7em;
+	background-image: url("https://codeyourfuture.io/wp-content/uploads/2019/03/cyf_brand.png");
+	background-repeat: no-repeat;
+	background-size: 20px;
+	max-width: 736px;
+	}
+	.nav {
+	display: flex;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	border-radius: 4%;
+	text-align: center;
+	}
+	input[type="search"] {
+	position: relative;
+	text-align: center;
+	left: -3px;
+	box-sizing: border-box;
+	background-image: url("https://www.w3schools.com/css/searchicon.png");
+	background-repeat: no-repeat;
+	width: 90%;
+	border-bottom: 1px solid;
+	}
+	select {
+	position: relative;
+	left: 100px;
+	font-size: 20px;
+	}
+	.addTerm {
+	top: -60px;
+	position: relative;
+	left: 90px;
+	width: px;
+	}
+	.adminBtn{
+	left:180px;
+	top: -11px;
+	}
+	.backBtn {
+	position: relative;
+	width: 100%;
+	top: -12px;
+	left: 100px;
+	}
+	.btn-section {
+	position: absolute !important;
+	top: -10px;
+	right: 80px;
+	}
+	.desPage {
+	width: 100%;
+	}
+	.termsContent {
+	overflow-x: hidden !important;
+	}
+	
+	.addTermText{
+	left:-100px;
+	}
+	.editTerm{
+	left: -100px;
+	}
+	}
+	
+	/* iPhone 5/SE Landscape */
+	@media only screen 
+	and (min-device-width: 320px) 
+	and (max-device-width: 568px)
+	and (-webkit-min-device-pixel-ratio: 2)
+	and (orientation: landscape) {
+	body {
+	margin:0;
+	max-width: 736px;
+	box-sizing: border-box;
+	overflow-x: hidden !important;
+	}
+	.border{
+	max-width:736px;
+	box-sizing: border-box;
+	overflow-x: hidden !important;
+	}
+	header {
+	background: lightblue;
+	height: 3.7em;
+	background-image: url("https://codeyourfuture.io/wp-content/uploads/2019/03/cyf_brand.png");
+	background-repeat: no-repeat;
+	background-size: 20px;
+	max-width: 736px;
+	}
+	.nav {
+	display: flex;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	border-radius: 4%;
+	text-align: center;
+	}
+	input[type="search"] {
+	position: relative;
+	text-align: center;
+	left: -93px;
+	top:60px;
+	box-sizing: border-box;
+	background-image: url("https://www.w3schools.com/css/searchicon.png");
+	background-repeat: no-repeat;
+	width: 90%;
+	border-bottom: 1px solid;
+	}
+	select {
+	position: absolute;
+	top:-48px;
+	left: 150px;
+	}
+	.addTerm {
+	top: -60px;
+	position: relative;
+	left: 310px;
+	}
+	.adminBtn{
+	left:300px;
+	top: -11px;
+	}
+	.backBtn {
+	position: relative;
+	width: 100%;
+	top: -12px;
+	left: 300px;
+	}
+	.btn-section {
+	position: absolute !important;
+	top: -10px;
+	right: 80px;
+	}
+	.desPage {
+	width: 100%;
+	}
+	.termsContent {
+	overflow-x: hidden !important;
+	}
+	.addTermText{
+	left:-280px;
+	}
+	.editTerm{
+	left: -280px;
+	}
+	
+	.cyfTitle{
+	margin-top: 10px;
+	}
+	}
+	
+	/* Pixel 2XL Portrait */
+	@media only screen 
+	and (min-device-width: 411px) 
+	and (max-device-width: 823px)
+	and (-webkit-min-device-pixel-ratio: 2)
+	and (orientation: portrait) {
+	
+	body {
+	margin:0;
+	max-width: 736px;
+	box-sizing: border-box;
+	overflow-x: hidden !important;
+	}
+	.border{
+	max-width:736px;
+	box-sizing: border-box;
+	overflow-x: hidden !important;
+	}
+	header {
+	background: lightblue;
+	height: 3.7em;
+	background-image: url("https://codeyourfuture.io/wp-content/uploads/2019/03/cyf_brand.png");
+	background-repeat: no-repeat;
+	background-size: 20px;
+	max-width: 736px;
+	}
+	.nav {
+	display: flex;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	border-radius: 4%;
+	text-align: center;
+	}
+	input[type="search"] {
+	position: relative;
+	text-align: center;
+	left: 50px;
+	box-sizing: border-box;
+	background-image: url("https://www.w3schools.com/css/searchicon.png");
+	background-repeat: no-repeat;
+	width: 90%;
+	border-bottom: 1px solid;
+	}
+	select {
+	position: relative;
+	left: 150px;
+	font-size: 20px;
+	}
+	.addTerm {
+	top: -60px;
+	position: relative;
+	left: 130px;
+	}
+	.adminBtn{
+	left:120px;
+	top: -11px;
+	}
+	.backBtn {
+	position: relative;
+	width: 100%;
+	top: -12px;
+	left: 180px;
+	}
+	.btn-section {
+	position: absolute !important;
+	top: -10px;
+	right: 80px;
+	}
+	.desPage {
+	width: 100%;
+	}
+	.termsContent {
+	overflow-x: hidden !important;
+	}
+	
+	.addTermText{
+	left:-165px;
+	}
+	.editTerm{
+	left: -165px;
+	}
+	}
+	
+	/* Pixel 2XL Landscape */
+	@media only screen 
+	and (min-device-width: 411px) 
+	and (max-device-width: 823px)
+	and (-webkit-min-device-pixel-ratio: 2)
+	and (orientation: landscape) {
+	
+	body {
+	margin:0;
+	max-width: 823px;
+	box-sizing: border-box;
+	overflow-x: hidden !important;
+	}
+	.border{
+	max-width:823px;
+	box-sizing: border-box;
+	overflow-x: hidden !important;
+	}
+	header {
+	background: lightblue;
+	height: 3.7em;
+	background-image: url("https://codeyourfuture.io/wp-content/uploads/2019/03/cyf_brand.png");
+	background-repeat: no-repeat;
+	background-size: 140px;
+	max-width: 823px;
+	}
+	.nav {
+	display: flex;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	border-radius: 4%;
+	text-align: center;
+	}
+	input[type="search"] {
+	position: relative;
+	text-align: center;
+	left: 10px;
+	box-sizing: border-box;
+	background-image: url("https://www.w3schools.com/css/searchicon.png");
+	background-repeat: no-repeat;
+	width: 80%;
+	border-bottom: 1px solid;
+	}
+	select {
+	position: relative;
+	left: 5px;
+	font-size: 20px;
+	}
+	.addTerm {
+	top: -10px;
+	position: relative;
+	left: 580px;
+	}
+	.adminBtn{
+	left:680px;
+	top: -10px;
+	}
+	.backBtn {
+	position: relative;
+	width: 100%;
+	top: -10px;
+	left: 500px;
+	}
+	.btn-section {
+	position: absolute !important;
+	top: -10px;
+	right: 80px;
+	}
+	.desPage {
+	width: 100%;
+	}
+	.termsContent {
+	overflow-x: hidden !important;
+	}
+	
+	.addTermText{
+	left:-500px;
+	}
+	.editTerm{
+	left: -500px;
+	}
+	}
+	
+	/*
+	/*cornerstone do not delete*/
+	@media screen and (max-width: 576px) {
+	body {
+	max-width: 576px;
+	overflow-x: hidden !important;
+	}
+	header {
+	background: lightblue;
+	height: 3.7em;
+	background-image: url("https://codeyourfuture.io/wp-content/uploads/2019/03/cyf_brand.png");
+	background-repeat: no-repeat;
+	background-size: 120px;
+	max-width: 576px;
+	}
+	.nav {
+	display: flex;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	border-radius: 4%;
+	text-align: center;
+	}
+	input[type="search"] {
+	position: relative;
+	right: -30px;
+	box-sizing: border-box;
+	background-image: url("https://www.w3schools.com/css/searchicon.png");
+	background-repeat: no-repeat;
+	max-width: 100%;
+	}
+	select {
+	position: relative;
+	right: -100px;
+	font-size: 20px;
+	}
+	.addTerm {
+	top: -11px;
+	position: relative;
+	right: -175px;
+	}
+	.backBtn {
+	position: relative;
+	width: 100%;
+	top: -12px;
+	right: -100px;
+	}
+	.btn-section {
+	position: absolute;
+	top: -12px;
+	right: 10px;
+	}
+	
+	.termsContent {
+	overflow-x: hidden !important;
+	}
+	
+	.addTermText{
+	right:100px;
+	}
+	.editTerm{
+	right: 100px;
+	}
+	
+	}
+	/* These are previous responsive design style
+	@media screen and (max-width: 812px) {
+	body {
+	max-width: 812px;
+	overflow-x: hidden !important;
+	}
+	header {
+	background: lightblue;
+	height: 3.7em;
+	background-image: url("https://codeyourfuture.io/wp-content/uploads/2019/03/cyf_brand.png");
+	background-repeat: no-repeat;
+	background-size: 150px;
+	max-width: 812px;
+	}
+	.nav {
+	display: flex;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	border-radius: 4%;
+	text-align: center;
+	}
+	input[type="search"] {
+	position: relative;
+	right: -30px;
+	box-sizing: border-box;
+	background-image: url("https://www.w3schools.com/css/searchicon.png");
+	background-repeat: no-repeat;
+	max-width: 100%;
+	}
+	select {
+	position: relative;
+	right: -100px;
+	font-size: 20px;
+	}
+	.addTerm {
+	top: -11px;
+	position: relative;
+	right: -200px;
+	}
+	.desPage {
+	width: 100%;
+	}
+	.termsContent {
+	overflow-x: hidden !important;
+	}
+	.backBtn {
+	position: relative;
+	width: 100%;
+	top: -12px;
+	right: -140px;
+	}
+	.btn-section {
+	position: fixed;
+	top: -12px;
+	right: 20px;
+	}
+	}
+	@media only screen and (min-width: 414px) and (max-width: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+	body {
+	max-width: 736px;
+	overflow-x: hidden !important;
+	}
+	header {
+	background: lightblue;
+	height: 3.7em;
+	background-image: url("https://codeyourfuture.io/wp-content/uploads/2019/03/cyf_brand.png");
+	background-repeat: no-repeat;
+	background-size: 150px;
+	max-width: 736px;
+	}
+	.nav {
+	display: flex;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	border-radius: 4%;
+	text-align: center;
+	}
+	input[type="search"] {
+	position: relative;
+	right: -30px;
+	box-sizing: border-box;
+	background-image: url("https://www.w3schools.com/css/searchicon.png");
+	background-repeat: no-repeat;
+	max-width: 100%;
+	}
+	select {
+	position: relative;
+	right: -100px;
+	font-size: 20px;
+	}
+	.addTerm {
+	top: -11px;
+	position: relative;
+	right: -200px;
+	}
+	.backBtn {
+	position: relative;
+	width: 100%;
+	top: -12px;
+	right: -140px;
+	}
+	.btn-section {
+	position: fixed;
+	top: -12px;
+	right: 150px;
+	}
+	}
+	@media screen and (max-width: 677px) {
+	body {
+	max-width: 677px;
+	overflow-x: hidden !important;
+	}
+	header {
+	background: lightblue;
+	height: 3.7em;
+	background-image: url("https://codeyourfuture.io/wp-content/uploads/2019/03/cyf_brand.png");
+	background-repeat: no-repeat;
+	background-size: 150px;
+	max-width: 677px;
+	}
+	.nav {
+	display: flex;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	border-radius: 4%;
+	text-align: center;
+	}
+	input[type="search"] {
+	position: relative;
+	right: -30px;
+	box-sizing: border-box;
+	background-image: url("https://www.w3schools.com/css/searchicon.png");
+	background-repeat: no-repeat;
+	max-width: 100%;
+	}
+	select {
+	position: relative;
+	right: -100px;
+	font-size: 20px;
+	}
+	.addTerm {
+	top: -11px;
+	position: relative;
+	right: -200px;
+	}
+	.backBtn {
+	position: relative;
+	width: 100%;
+	top: -12px;
+	right: -140px;
+	}
+	.btn-section {
+	position: fixed;
+	top: -12px;
+	right: 150px;
+	}
+	}
+	@media screen and (max-width: 576px) {
+	body {
+	max-width: 576px;
+	overflow-x: hidden !important;
+	}
+	header {
+	background: lightblue;
+	height: 3.7em;
+	background-image: url("https://codeyourfuture.io/wp-content/uploads/2019/03/cyf_brand.png");
+	background-repeat: no-repeat;
+	background-size: 120px;
+	max-width: 576px;
+	}
+	.nav {
+	display: flex;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	border-radius: 4%;
+	text-align: center;
+	}
+	input[type="search"] {
+	position: relative;
+	right: -30px;
+	box-sizing: border-box;
+	background-image: url("https://www.w3schools.com/css/searchicon.png");
+	background-repeat: no-repeat;
+	max-width: 100%;
+	}
+	select {
+	position: relative;
+	right: -100px;
+	font-size: 20px;
+	}
+	.addTerm {
+	top: -11px;
+	position: relative;
+	right: -175px;
+	}
+	.backBtn {
+	position: relative;
+	width: 100%;
+	top: -12px;
+	right: -100px;
+	}
+	.btn-section {
+	position: absolute;
+	top: -12px;
+	right: 10px;
+	}
+	}
+	*/
+	
