@@ -56,6 +56,8 @@ const GlossaryList = (props) => {
                   Add Term
                 </Link>
                  </button>
+                 </div>
+              
                    <div className='adminBtn'>
 
                   <button
@@ -67,7 +69,7 @@ const GlossaryList = (props) => {
               </button>
 
                    </div>
-            </div>
+            
             <SearchTerm
               search={search}
               setSearch={setSearch}
