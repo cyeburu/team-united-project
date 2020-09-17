@@ -37,7 +37,7 @@ const TermsDescription = (props) => {
         <div className="termsContent">
           <div className="backBtn">
             <Link to={`/`}>
-              <button className="bg-blue-500 hover:bg-green-700 text-white font-bold py-1 px-2 rounded ml-4 mt-4">
+              <button className="bg-blue-500 hover:bg-green-700 text-white font-bold py-1 px-2 rounded ml-4 mt-4 Btnback">
                 Back
               </button>
             </Link>
@@ -51,7 +51,8 @@ const TermsDescription = (props) => {
                 </h5>
               </div>
               <hr />
-              <div className="desc-section">
+              
+                <div className="jumbotron-fluid">
                 <h5>
                   <b>Description:</b>
                 </h5>

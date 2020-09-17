@@ -10,7 +10,7 @@ const CatergoriseFilter = ({ setCategoriseFilter, setSearch }) => {
     <div>
       <select
         defaultValue={"DEFAULT"}
-        className="border-2 border-gray-300 bg-white h-10 px-4 pr-8 rounded-lg text-lg"
+        className="border-2 border-gray-300 bg-white h-10 px-4 pr-8 rounded-lg text-lg select"
         onChange={handleSelect}
       >
         <option value="">Sort A-Z</option>
