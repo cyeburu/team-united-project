@@ -78,7 +78,9 @@ const GlossaryList = (props) => {
               setSearch={setSearch}
             />
           </div>
+          <div className="cyfTitle">
           <h1 className="title">Code Your Future Glossary</h1>
+          </div>
           <h3>
             <ul className="container  list-unstyled list-group list-group-striped col-md-10">
               {search
