@@ -76,12 +76,13 @@ const EditTermForm = (props) => {
           </button>
         </Link>
         <div className="editTerm">
-          <h3 className="text-center  text-muted">Edit A Term</h3>
+          <h3 className="title">Edit A Term</h3>
         </div>
       </div>
       <div>
         <ErrorMessage errors={errors} name="singleErrorInput" />
       </div>
+      <div className="jumbotron">
       <form onSubmit={handleSubmit(onSubmit)} className="container">
         <label htmlFor="Terms">Term:</label>
         <input
@@ -131,8 +132,11 @@ const EditTermForm = (props) => {
           defaultValue={newTerm.link2}
           onChange={inputChangeHandler}
         />
+         <div className="updateBtn">
         <button className="btn btn-warning btn-block">Update Term</button>
+        </div>
       </form>
+      </div>
     </div>
   );
 };
