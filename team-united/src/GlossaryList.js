@@ -47,8 +47,7 @@ const GlossaryList = (props) => {
             <div className="addTerm">
               <button
                 onClick={clickHandler}
-                className="bg-green-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded ml-4 mt-4"
-              >
+                className="bg-green-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded ml-4 mt-4">
                 <Link
                   to={`/AddTermForm/`}
                   style={{ textDecoration: "none", color: "white" }}
