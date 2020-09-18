@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
 import "./App.css";
+
 import EditTermForm from "./EditTermForm";
 import ReactGa from "react-ga";
 
