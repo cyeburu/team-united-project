@@ -40,43 +40,46 @@ const GlossaryList = (props) => {
     }
 
   return (
-    <div>
+    <>
       {props.convertedData !== null ? (
-        <div>
+        <>
           <div className="nav">
-            <div className="addTerm">
-              <button
-                onClick={clickHandler}
-                className="bg-green-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded ml-4 mt-4"
-              >
-                <Link
-                  to={`/AddTermForm/`}
-                  style={{ textDecoration: "none", color: "white" }}
+            <div className="termAdminFlex">
+              <div className="addTerm">
+                <button
+                  onClick={clickHandler}
+                  className="bg-green-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded ml-4 mt-4"
                 >
-                  Add Term
-                </Link>
-                 </button>
-                     </div>
-                   <div className='adminBtn'>
-
-                  <button
-                onClick={()=>adminClickHandler()}
-                className="bg-blue-500 hover:bg-orange-700 text-white font-bold py-1 px-2 rounded ml-4 mt-4"
-              > { admin ? "Logout " : "Login " }
+                  <Link
+                    to={`/AddTermForm/`}
+                    style={{ textDecoration: "none", color: "white" }}
+                  >
+                    Add Term
+                  </Link>
+                </button>
+              </div>
+              <div className="adminBtn">
+                <button
+                  onClick={() => adminClickHandler()}
+                  className="bg-blue-500 hover:bg-orange-700 text-white font-bold py-1 px-2 rounded ml-4 mt-4"
+                >
+                  {" "}
+                  {admin ? "Logout " : "Login "}
                   Admin
-               
-              </button>
-
+                </button>
+              </div>
             </div>
-            <SearchTerm
-              search={search}
-              setSearch={setSearch}
-              setCategoriseFilter={setCategoriseFilter}
-            />
-            <CatergoriseFilter
-              setCategoriseFilter={setCategoriseFilter}
-              setSearch={setSearch}
-            />
+            <div className="searchSelectFlex">
+              <SearchTerm
+                search={search}
+                setSearch={setSearch}
+                setCategoriseFilter={setCategoriseFilter}
+              />
+              <CatergoriseFilter
+                setCategoriseFilter={setCategoriseFilter}
+                setSearch={setSearch}
+              />
+            </div>
           </div>
           <h1 className="title">Code Your Future Glossary</h1>
           <h3>
@@ -102,7 +105,7 @@ const GlossaryList = (props) => {
                           <Link
                             to={{
                               pathname: `/TermsDescription/${terms._id}`,
-                              state:{ admin }
+                              state: { admin },
                             }}
                           >
                             {terms.name}
@@ -128,7 +131,6 @@ const GlossaryList = (props) => {
                             to={{
                               pathname: `/TermsDescription/${terms._id}`,
                               state: { admin },
-                              
                             }}
                           >
                             {terms.name}
@@ -138,9 +140,9 @@ const GlossaryList = (props) => {
                     })}
             </ul>
           </h3>
-        </div>
+        </>
       ) : null}
-    </div>
+    </>
   );
 };
 

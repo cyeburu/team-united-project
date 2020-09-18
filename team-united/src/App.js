@@ -8,7 +8,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
 import "./App.css";
-
+import logo from'./logo.png'
 import EditTermForm from "./EditTermForm";
 import ReactGa from "react-ga";
 
@@ -46,44 +46,44 @@ const App = () => {
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
   return (
-    <div>
-      <header>
-        <BrowserRouter>
-          <Switch>
-            <Route
-              path="/"
-              exact
-              render={() => (
-                <div>
-                  <GlossaryList
-                    data={currentPost}
-                    convertedData={convertedData}
-                    allData={data}
-                  />
-                  <Pagination
-                    postsPerPage={postsPerPage}
-                    totalPosts={data.length}
-                    paginate={paginate}
-                    currentPage={currentPage}
-                    setCurrentPage={setCurrentPage}
-                  />
-                </div>
-              )}
-            />
-            
-            
+    <>
+       <header>
+      <img src={logo} className="logo" alt="logo" />
+     </header>
+        
+       
 
-            <Route path="/TermsDescription/:id/" component={TermsDescription} />
-            <Route
-              path="/AddTermForm"
-              render={() => <AddTermForm addTerm={addTerm} data={data} />}
-            />
-            <Route exact path="/EditTermForm/:id" component={EditTermForm} />
-          </Switch>
-        </BrowserRouter>
-      </header>
-      <footer></footer>
-    </div>
+      <BrowserRouter>
+        <Switch>
+          <Route
+            path="/"
+            exact
+            render={() => (
+              <>
+                <GlossaryList
+                  data={currentPost}
+                  convertedData={convertedData}
+                  allData={data}
+                />
+                <Pagination
+                  postsPerPage={postsPerPage}
+                  totalPosts={data.length}
+                  paginate={paginate}
+                  currentPage={currentPage}
+                  setCurrentPage={setCurrentPage}
+                />
+              </>
+            )}
+          />
+          <Route path="/TermsDescription/:id/" component={TermsDescription} />
+          <Route
+            path="/AddTermForm"
+            render={() => <AddTermForm addTerm={addTerm} data={data} />}
+          />
+          <Route exact path="/EditTermForm/:id" component={EditTermForm} />
+        </Switch>
+      </BrowserRouter>
+    </>
   );
 };
 
