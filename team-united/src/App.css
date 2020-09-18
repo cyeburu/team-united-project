@@ -120,7 +120,6 @@ body {
   
   select {
 	position: relative !important;
-	
 	right: -400px;
 	font-size: 19px;
 	top: 8px;
@@ -162,13 +161,13 @@ body {
   
   .desc-section {
 	position: relative;
-	top: -70px;
-    margin-top: 20px;
+    bottom: 135px;
 	padding:15px;
 	
 
    
   }
+
 
   .jumbotron {
 	position: relative;
@@ -197,13 +196,16 @@ body {
 	-webkit-box-shadow: 25px 0px 25px -25px rgba(0,0,0,0.21), -25px 0px 25px -25px rgba(0,0,0,0.21);
 	-moz-box-shadow: 25px 0px 25px -25px rgba(0,0,0,0.21), -25px 0px 25px -25px rgba(0,0,0,0.21);
 	box-shadow: 25px 0px 25px -25px rgba(0,0,0,0.21), -25px 0px 25px -25px rgba(0,0,0,0.21);
-
-
+	
+   
  }
 .child{
-	padding:10px;
+	padding:5px;
 }
-  
+
+
+
+
   
   .btn-section {
 	position: absolute !important;

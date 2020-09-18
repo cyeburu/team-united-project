@@ -54,12 +54,13 @@ const TermsDescription = (props) => {
               <div className="jumbotron jumbotron-fluid">
                
                 <div className="desc-section">
-                <h4><b className="mb-0">Description:</b></h4>
+                
                 </div>
                
 
                 <div className="desc-section">
-                <p className="lead">{singleData.description}</p>
+              
+               <h4><b>Description:</b><br></br> {singleData.description}</h4>
               </div>
               </div>
               <div className="link-flex ">
