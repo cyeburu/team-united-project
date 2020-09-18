@@ -180,7 +180,9 @@ body {
   }
   
   .desc-section {
-	margin-bottom: 100px;
+	padding:10px;
+	position: relative !important;
+    bottom: 35px;
   }
   
   .btn-section {
@@ -255,6 +257,47 @@ body {
 	  width: 100%;
 	  box-sizing: border-box;
   }
+
+  .jumbotron {
+	position: relative;
+	background-color:rgb(220, 216, 216);
+	border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 0px solid #000000;
+	width: 80%;
+	height: 80%;
+	margin-left: 10%;
+	-webkit-box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.21);
+	-moz-box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.21);
+	box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.21);
+
+ }
+   
+  .jumbotron-fluid{
+	position: relative!important;
+	background-color:snow;
+	border-radius: 15px 15px 15px 15px;
+    -moz-border-radius: 15px 15px 15px 15px;
+    -webkit-border-radius: 15px 15px 15px 15px;
+	width: 100%;
+	height: 80%;
+	margin-left: 0%;
+	-webkit-box-shadow: 25px 0px 25px -25px rgba(0,0,0,0.21), -25px 0px 25px -25px rgba(0,0,0,0.21);
+	-moz-box-shadow: 25px 0px 25px -25px rgba(0,0,0,0.21), -25px 0px 25px -25px rgba(0,0,0,0.21);
+	box-shadow: 25px 0px 25px -25px rgba(0,0,0,0.21), -25px 0px 25px -25px rgba(0,0,0,0.21);
+
+
+ }
+.child{
+	padding:10px;
+}
+
+.updateBtn{
+	padding:10px;
+}
+  
+
 
 /*Desktop*/
 

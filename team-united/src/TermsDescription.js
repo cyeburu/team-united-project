@@ -44,25 +44,26 @@ const TermsDescription = (props) => {
           </div>
           <div className="container">
             <div className="child">
-              <div>
-                <h5>
-                  <b>Term: </b>
-                  {singleData.name}
-                </h5>
-              </div>
+              
+            <h4>
+                 <b>Term:</b>{singleData.name}
+                </h4>
+             
               <hr />
+              <div className="jumbotron jumbotron-fluid">
               <div className="desc-section">
                 <h5>
                   <b>Description:</b>
                 </h5>
                 <p>{singleData.description}</p>
               </div>
+            </div>
               <div className="link-flex ">
                 <h5>
                   <b>Additional Information:</b>
                 </h5>
-                <a href={singleData.link1}>{singleData.link1}</a>
-                <a href={singleData.link2}>{singleData.link2}</a>
+                <b><a className="text-primary" href={singleData.link1}>{singleData.link1}</a></b>
+              <b><a className="text-primary" href={singleData.link2}>{singleData.link2}</a></b>
               </div>
               <div className="btn-section">
                 <div>
