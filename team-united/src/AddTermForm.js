@@ -84,7 +84,7 @@ const AddTermForm = (props) => {
       </div>
       <div className="jumbotron">
       <form onSubmit={handleSubmit(onSubmit)} className="container">
-        <label htmlFor="Terms">Add Terminology:</label>
+        <label htmlFor="Terms">Add Terminology: *required* </label>
         <input
           ref={register({
             required: "ADDTERM REQUIRED",
@@ -100,7 +100,7 @@ const AddTermForm = (props) => {
           onChange={inputChangeHandler}
         />
         {errors.name && <p>{errors.name.message}</p>}
-        <label htmlFor="description">Description:</label>
+        <label htmlFor="description">Description: *required* </label>
         <textarea
           ref={register({
             required: "DESCRIPTION REQUIRED",
@@ -116,7 +116,7 @@ const AddTermForm = (props) => {
           onChange={inputChangeHandler}
         />
         {errors.description && <p>{errors.description.message}</p>}
-        <label htmlFor="link">Link1: </label>
+        <label htmlFor="link">Link 1: *required* </label>
         <input
           ref={register({ required: "LINK REQUIRED" })}
           placeholder="Url for further information"
@@ -126,7 +126,7 @@ const AddTermForm = (props) => {
           onChange={inputChangeHandler}
         />
         {errors.link && <p>{errors.link.message}</p>}
-        <label htmlFor="link">Link2: </label>
+        <label htmlFor="link">Link 2: *optional* </label>
         <input
           placeholder="Url for further information"
           type="url"
