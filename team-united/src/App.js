@@ -47,8 +47,8 @@ const App = () => {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
   return (
     <>
-       <header>
-      <img src={logo} className="logo" alt="logo" />
+     <header>
+     <img src={logo} className="logo" alt="logo" />
      </header>
         
        
