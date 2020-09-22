@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import axios from "axios";
 import ReactGa from "react-ga";
+import logo from'./logo.png'
 
 const TermsDescription = (props) => {
   const [singleData, setSingleData] = useState(null);
@@ -35,6 +36,8 @@ const TermsDescription = (props) => {
     <div className="p-container">
       {singleData && (
         <div className="termsContent">
+         
+         
           <div className="backBtn">
             <Link to={`/`}>
               <button className="bg-blue-500 hover:bg-green-700 text-white font-bold py-1 px-2 rounded ml-4 mt-4">
@@ -42,6 +45,7 @@ const TermsDescription = (props) => {
               </button>
             </Link>
           </div>
+        
           <div className="container">
             <div className="child">
               
@@ -59,11 +63,13 @@ const TermsDescription = (props) => {
               </div>
             </div>
               <div className="link-flex ">
-                <h5>
+                <h5 className="info-text">
                   <b>Additional Information:</b>
                 </h5>
-                <b><a className="text-primary" href={singleData.link1}>{singleData.link1}</a></b>
-              <b><a className="text-primary" href={singleData.link2}>{singleData.link2}</a></b>
+                <div className="termsLinks">
+                <a className="text-primary" href={singleData.link1}>{singleData.link1}</a>
+              <a className="text-primary" href={singleData.link2}>{singleData.link2}</a>
+              </div>
               </div>
               <div className="btn-section">
                 <div>

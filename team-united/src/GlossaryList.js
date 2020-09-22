@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import CatergoriseFilter from "./CategoriseFilter";
 import Fuse from "fuse.js";
 import ReactGa from "react-ga";
+import logo from'./logo.png'
 
 const GlossaryList = (props) => {
   const [search, setSearch] = useState("");
