@@ -32,7 +32,7 @@ const TermsDescription = (props) => {
     window.location = "/";
   };
   return (
-    <div className="desPage">
+    <div className="p-container">
       {singleData && (
         <div className="termsContent">
           <div className="backBtn">

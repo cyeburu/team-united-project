@@ -46,9 +46,10 @@ body {
 
  .searchSelectFlex{
 	 display: flex;
-	 flex-direction: row-reverse;
-	  justify-content:space-around;
-	  width: 50%;
+	 flex-direction: row;
+	  justify-content:space-evenly;
+	  width: 60%;
+	
  }
   .addTerm {
     position: relative;
@@ -147,7 +148,7 @@ body {
   
   input[type="search"] {
 	position: relative !important;
-	
+	width: 120%;
 	box-sizing: border-box;
 	background-image: url("https://www.w3schools.com/css/searchicon.png");
 	background-position: 10px 10px;
@@ -251,7 +252,7 @@ body {
   }
   .adminBtn{
 	  position: relative;
-	  top:11px;
+	  top:-11px;
   }
   .border{
 	  width: 100%;
@@ -297,11 +298,14 @@ body {
 	padding:10px;
 }
   
-
+.p-content{
+	box-sizing: border-box ;
+	width: 100%;
+}
 
 /*Desktop*/
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 400px) and (max-width: 900px) {
 	body {
 	overflow-x: hidden;
   }
@@ -334,9 +338,12 @@ body {
   }
   
   .backBtn {
-	position: relative;
+	position:absolute;
 	width: 100%;
 	top: -12px;
+	display: flex;
+	justify-content: center ;
+	
 	
   }
   
@@ -436,7 +443,10 @@ body {
   .searchSelectFlex{
 	  display: flex;
 	  flex-direction: row;
-	   width: 40%;
+	   width: 100%;
+	   justify-content: space-around;
+	   
+	    
   }
   
   textarea {
@@ -541,7 +551,11 @@ body {
 	  width: 100%;
 	  box-sizing: border-box;
   }
-   
+   .p-content{
+	box-sizing: border-box ;
+	width: 100%;
+}
+
 }
 
 /* Mobile */
@@ -581,10 +595,11 @@ body {
   }
   
   .backBtn {
-	position: relative;
+	position: absolute;
 	width: 100%;
 	top: -12px;
-	
+	display: flex;
+	justify-content: space-between ;
   }
   
   .editTerm {
@@ -717,6 +732,7 @@ body {
   .btn-section {
 	position:absolute;
 	top: -12px;
+	left: 122px;
 	
   }
   .link-flex {
@@ -788,7 +804,11 @@ body {
 	  width: 100%;
 	  box-sizing: border-box;
   }
-  
+  .p-content{
+	box-sizing: border-box ;
+	width: 100%;
+}
+
 }
 
 
