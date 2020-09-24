@@ -2,17 +2,16 @@ import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import axios from "axios";
 import ReactGa from "react-ga";
-import logo from'./logo.png'
 
 const TermsDescription = (props) => {
   const [singleData, setSingleData] = useState(null);
   let location = useLocation();
   console.log(location.state.admin);
- 
+
   const clickHandler = () => {
     ReactGa.event({
       category: "Button",
-      action: "Edit button was clicked"
+      action: "Edit button was clicked",
     });
   };
 
@@ -36,8 +35,6 @@ const TermsDescription = (props) => {
     <div className="p-container">
       {singleData && (
         <div className="termsContent">
-         
-         
           <div className="backBtn">
             <Link to={`/`}>
               <button className="bg-blue-500 hover:bg-green-700 text-white font-bold py-1 px-2 rounded ml-4 mt-4">
@@ -45,31 +42,35 @@ const TermsDescription = (props) => {
               </button>
             </Link>
           </div>
-        
+
           <div className="container">
             <div className="child">
-              
-            <h4>
-                 <b>Term:</b>{singleData.name}
-                </h4>
-             
+              <h4>
+                <b>Term: </b>
+                {singleData.name}
+              </h4>
+
               <hr />
               <div className="jumbotron jumbotron-fluid">
-              <div className="desc-section">
-                <h5>
-                  <b>Description:</b>
-                </h5>
-                <p>{singleData.description}</p>
+                <div className="desc-section">
+                  <h5>
+                    <b>Description:</b>
+                  </h5>
+                  <p>{singleData.description}</p>
+                </div>
               </div>
-            </div>
               <div className="link-flex ">
                 <h5 className="info-text">
                   <b>Additional Information:</b>
                 </h5>
                 <div className="termsLinks">
-                <a className="text-primary" href={singleData.link1}>{singleData.link1}</a>
-              <a className="text-primary" href={singleData.link2}>{singleData.link2}</a>
-              </div>
+                  <a className="text-primary" href={singleData.link1}>
+                    {singleData.link1}
+                  </a>
+                  <a className="text-primary" href={singleData.link2}>
+                    {singleData.link2}
+                  </a>
+                </div>
               </div>
               <div className="btn-section">
                 <div>

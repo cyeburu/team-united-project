@@ -13,7 +13,7 @@ const AddTermForm = (props) => {
     name: "",
     description: "",
     link1: "",
-    link2: ""
+    link2: "",
   };
 
   const [newTerm, setNewTerm] = useState(initialFormState);
@@ -31,13 +31,13 @@ const AddTermForm = (props) => {
     if (doesTermExist(newTerm.name)) {
       return setError("name", {
         type: "manual",
-        message: "Term Already Exists in the database"
+        message: "Term Already Exists in the database",
       });
     }
     if (offensiveTermPrevention(newTerm.name)) {
       return setError("name", {
         type: "manual",
-        message: "Where are your manners type another term"
+        message: "Where are your manners type another term",
       });
     }
     if (newTerm.name) {
@@ -68,7 +68,7 @@ const AddTermForm = (props) => {
   };
 
   return (
-    <div className = 'border'>
+    <div className="border">
       <div className="backBtn">
         <Link to={`/`}>
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded ml-4 mt-4">
@@ -83,62 +83,62 @@ const AddTermForm = (props) => {
         <ErrorMessage errors={errors} name="singleErrorInput" />
       </div>
       <div className="jumbotron">
-      <form onSubmit={handleSubmit(onSubmit)} className="container">
-        <label htmlFor="Terms">Add Terminology: * </label>
-        <input
-          ref={register({
-            required: "ADDTERM REQUIRED",
-            minLength: {
-              value: 3,
-              message: "Addterm must be longer than 3 Characters "
-            }
-          })}
-          placeholder="Term name"
-          type="text"
-          name="name"
-          defaultValue={newTerm.name}
-          onChange={inputChangeHandler}
-        />
-        {errors.name && <p>{errors.name.message}</p>}
-        <label htmlFor="description">Description: * </label>
-        <textarea
-          ref={register({
-            required: "DESCRIPTION REQUIRED",
-            minLength: {
-              value: 10,
-              message: "description must be longer than 10 Characters "
-            }
-          })}
-          placeholder="Term description"
-          type="text"
-          name="description"
-          defaultValue={newTerm.description}
-          onChange={inputChangeHandler}
-        />
-        {errors.description && <p>{errors.description.message}</p>}
-        <label htmlFor="link">Link 1: * </label>
-        <input
-          ref={register({ required: "LINK REQUIRED" })}
-          placeholder="Url for further information"
-          type="url"
-          name="link1"
-          defaultValue={newTerm.link1}
-          onChange={inputChangeHandler}
-        />
-        {errors.link && <p>{errors.link.message}</p>}
-        <label htmlFor="link">Link 2:</label>
-        <input
-          placeholder="Url for further information"
-          type="url"
-          name="link2"
-          defaultValue={newTerm.link2}
-          onChange={inputChangeHandler}
-        />
+        <form onSubmit={handleSubmit(onSubmit)} className="container">
+          <label htmlFor="Terms">Add Terminology: * </label>
+          <input
+            ref={register({
+              required: "ADDTERM REQUIRED",
+              minLength: {
+                value: 3,
+                message: "Addterm must be longer than 3 Characters ",
+              },
+            })}
+            placeholder="Term name"
+            type="text"
+            name="name"
+            defaultValue={newTerm.name}
+            onChange={inputChangeHandler}
+          />
+          {errors.name && <p>{errors.name.message}</p>}
+          <label htmlFor="description">Description: * </label>
+          <textarea
+            ref={register({
+              required: "DESCRIPTION REQUIRED",
+              minLength: {
+                value: 10,
+                message: "description must be longer than 10 Characters ",
+              },
+            })}
+            placeholder="Term description"
+            type="text"
+            name="description"
+            defaultValue={newTerm.description}
+            onChange={inputChangeHandler}
+          />
+          {errors.description && <p>{errors.description.message}</p>}
+          <label htmlFor="link">Link 1: * </label>
+          <input
+            ref={register({ required: "LINK REQUIRED" })}
+            placeholder="Url for further information"
+            type="url"
+            name="link1"
+            defaultValue={newTerm.link1}
+            onChange={inputChangeHandler}
+          />
+          {errors.link && <p>{errors.link.message}</p>}
+          <label htmlFor="link">Link 2:</label>
+          <input
+            placeholder="Url for further information"
+            type="url"
+            name="link2"
+            defaultValue={newTerm.link2}
+            onChange={inputChangeHandler}
+          />
 
-        <button className="bg-red-500 text-white font-bold py-1 px-1 rounded ml-30 mt-4">
-          Add New Term
-        </button>
-      </form>
+          <button className="bg-red-500 text-white font-bold py-1 px-1 rounded ml-30 mt-4">
+            Add New Term
+          </button>
+        </form>
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ const EditTermForm = (props) => {
     name: "",
     description: "",
     link1: "",
-    link2: ""
+    link2: "",
   };
 
   const [newTerm, setNewTerm] = useState(initialFormState);
@@ -34,14 +34,14 @@ const EditTermForm = (props) => {
     if (offensiveTermPrevention(newTerm.name)) {
       return setError("name", {
         type: "manual",
-        message: "Where are your manners type another term"
+        message: "Where are your manners type another term",
       });
     }
 
     if (offensiveTermPrevention(newTerm.description)) {
       return setError("description", {
         type: "manual",
-        message: "Where are your manners type another term"
+        message: "Where are your manners type another term",
       });
     }
 
@@ -53,7 +53,7 @@ const EditTermForm = (props) => {
   };
 
   const loadTerm = () => {
-    const result = axios
+    axios
       .get(
         `https://cyf-glossary-backend.herokuapp.com/all-terms/${props.match.params.id}`
       )
@@ -68,7 +68,7 @@ const EditTermForm = (props) => {
     return filterTerms.length;
   };
   return (
-    <div className='border'>
+    <div className="border">
       <div className="backBtn">
         <Link to={`/`}>
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded ml-4 mt-4">
@@ -83,60 +83,60 @@ const EditTermForm = (props) => {
         <ErrorMessage errors={errors} name="singleErrorInput" />
       </div>
       <div className="jumbotron">
-      <form onSubmit={handleSubmit(onSubmit)} className="container">
-        <label htmlFor="Terms">Term:</label>
-        <input
-          ref={register({
-            required: "ADDTERM REQUIRED",
-            minLength: {
-              value: 3,
-              message: "Addterm must be longer than 3 Characters "
-            }
-          })}
-          type="text"
-          name="name"
-          defaultValue={newTerm.name}
-          onChange={inputChangeHandler}
-          readOnly
-        />
-        {errors.name && <p>{errors.name.message}</p>}
-        <label htmlFor="description">Description:</label>
-        <textarea
-          ref={register({
-            required: "DESCRIPTION REQUIRED",
-            minLength: {
-              value: 10,
-              message: "description must be longer than 10 Characters "
-            }
-          })}
-          type="text"
-          name="description"
-          defaultValue={newTerm.description}
-          onChange={inputChangeHandler}
-        />
-        {errors.description && <p>{errors.description.message}</p>}
-        <label htmlFor="link">Link1: </label>
-        <input
-          ref={register({ required: "LINK REQUIRED" })}
-          placeholder="Url for further information"
-          type="url"
-          name="link1"
-          defaultValue={newTerm.link1}
-          onChange={inputChangeHandler}
-        />
-        {errors.link && <p>{errors.link.message}</p>}
-        <label htmlFor="link">Link2: </label>
-        <input
-          type="url"
-          name="link2"
-          defaultValue={newTerm.link2}
-          onChange={inputChangeHandler}
-        />
-        <div className="updateBtn">
-        <button className="btn btn-warning btn-block">Update Term</button>
-        </div>
-      </form>
-       </div>
+        <form onSubmit={handleSubmit(onSubmit)} className="container">
+          <label htmlFor="Terms">Term:</label>
+          <input
+            ref={register({
+              required: "ADDTERM REQUIRED",
+              minLength: {
+                value: 3,
+                message: "Addterm must be longer than 3 Characters ",
+              },
+            })}
+            type="text"
+            name="name"
+            defaultValue={newTerm.name}
+            onChange={inputChangeHandler}
+            readOnly
+          />
+          {errors.name && <p>{errors.name.message}</p>}
+          <label htmlFor="description">Description:</label>
+          <textarea
+            ref={register({
+              required: "DESCRIPTION REQUIRED",
+              minLength: {
+                value: 10,
+                message: "description must be longer than 10 Characters ",
+              },
+            })}
+            type="text"
+            name="description"
+            defaultValue={newTerm.description}
+            onChange={inputChangeHandler}
+          />
+          {errors.description && <p>{errors.description.message}</p>}
+          <label htmlFor="link">Link1: </label>
+          <input
+            ref={register({ required: "LINK REQUIRED" })}
+            placeholder="Url for further information"
+            type="url"
+            name="link1"
+            defaultValue={newTerm.link1}
+            onChange={inputChangeHandler}
+          />
+          {errors.link && <p>{errors.link.message}</p>}
+          <label htmlFor="link">Link2: </label>
+          <input
+            type="url"
+            name="link2"
+            defaultValue={newTerm.link2}
+            onChange={inputChangeHandler}
+          />
+          <div className="updateBtn">
+            <button className="btn btn-warning btn-block">Update Term</button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };

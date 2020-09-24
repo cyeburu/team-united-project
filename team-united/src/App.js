@@ -8,10 +8,9 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
 import "./App.css";
-import logo from'./logo.png'
+import logo from "./logo.png";
 import EditTermForm from "./EditTermForm";
 import ReactGa from "react-ga";
-
 
 //tidy up done
 const App = () => {
@@ -29,8 +28,7 @@ const App = () => {
   useEffect(() => {
     axios
       .get(`https://cyf-glossary-backend.herokuapp.com/all-terms`)
-      .then((Result) => setData(Result.data)
-      )
+      .then((Result) => setData(Result.data));
   }, []);
 
   useEffect(() => {
@@ -47,11 +45,9 @@ const App = () => {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
   return (
     <>
-     <header>
-     <img src={logo} className="logo" alt="logo" />
-     </header>
-        
-       
+      <header>
+        <img src={logo} className="logo" alt="logo" />
+      </header>
 
       <BrowserRouter>
         <Switch>
