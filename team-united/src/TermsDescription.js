@@ -64,10 +64,10 @@ const TermsDescription = (props) => {
                   <b>Additional Information:</b>
                 </h5>
                 <div className="termsLinks">
-                  <a className="text-primary" href={singleData.link1}>
+                  <a target="_blank" className="text-primary" href={singleData.link1}>
                     {singleData.link1}
                   </a>
-                  <a className="text-primary" href={singleData.link2}>
+                  <a target="_blank" className="text-primary" href={singleData.link2}>
                     {singleData.link2}
                   </a>
                 </div>
